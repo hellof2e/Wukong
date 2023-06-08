@@ -14,8 +14,8 @@ end
 
 target 'JYMagicCube_Example' do
 
-  pod 'JYMagicCube', :path => '../'
-  pod 'JYWKJSEngine', :path => '../', :modular_headers => true
+  pod 'JYMagicCube', :path => '../../'
+  pod 'JYWKJSEngine', :path => '../../', :modular_headers => true
   
   pod 'YogaKit', '~> 1.18.1'
   pod 'YYCache', '~> 1.0.4'

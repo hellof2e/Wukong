@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES'
   }
-  s.source_files = "JYWKJSEngine/Classes/**/*.swift"
+  s.source_files = "iOS/JYWKJSEngine/Classes/**/*.swift"
 
 end
