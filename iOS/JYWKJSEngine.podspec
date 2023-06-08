@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
     'DEFINES_MODULE' => 'YES'
   }
   s.source_files = 'iOS/JYWKJSEngine/Classes/**/*'
-  s.public_header_files = ['JYWKJSEngine/Classes/PublicHeaders/*.h']
+  s.public_header_files = ['iOS/JYWKJSEngine/Classes/PublicHeaders/*.h']
 
 end
