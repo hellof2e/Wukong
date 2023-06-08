@@ -13,8 +13,10 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
   js runtime engine of Wukong.
                        DESC
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.homepage         = 'https://github.com/hellof2e/Wukong/tree/master/iOS'
+  s.license          = { :type => 'Apache License 2.0', :file => 'LICENSE' }
   s.author           = { 'hellobike' => 'hellobike@hellobike.com' }
+  s.source           = { :git => 'https://github.com/hellof2e/Wukong/tree/master/iOS', :tag => s.version.to_s }
   s.swift_version = '5.0'
   s.ios.deployment_target = '9.0'
   s.static_framework = true
