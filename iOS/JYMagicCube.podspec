@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JYMagicCube'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Mobile dynamic solution'
   s.description      = <<-DESC
   It is a complete cross-end native partial card dynamic display technology solution, 
@@ -17,13 +17,13 @@ Pod::Spec.new do |s|
   improving human efficiency and reducing package volume and other related issues. 
   This enables businesses to achieve one-time development, online at any time, and multi-end reuse based on Wukong.
                        DESC
-  s.homepage         = 'https://github.com/hellof2e/Wukong/tree/master/iOS'
   s.license          = { :type => 'Apache License 2.0', :file => 'LICENSE' }
-  s.author           = { 'hellobike' => 'hellobike@hellobike.com' }
-  s.source           = { :git => 'https://github.com/hellof2e/Wukong/tree/master/iOS', :tag => s.version.to_s }
+  s.homepage         = 'https://github.com/hellof2e/Wukong'
+  s.author           = 'hellobike'
+  s.source           = { :git => 'https://github.com/hellof2e/Wukong.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
   s.static_framework = true
-  s.source_files = 'JYMagicCube/Classes/**/*'
+  s.source_files = 'iOS/JYMagicCube/Classes/**/*'
   s.resource_bundles = {
     'JYMagicCube' => ['JYMagicCube/Assets/**/*.{xib,gif,xcassets,png,json,mp3,plist}']
   }
