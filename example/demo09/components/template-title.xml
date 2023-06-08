@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd">
+ <container width="100%" display="flex" flex-direction="column">
+    <span font-size="13rpx" color="#9195A3" content="电影榜/全部类型/全部地区"></span>
+ </container>
+</template>

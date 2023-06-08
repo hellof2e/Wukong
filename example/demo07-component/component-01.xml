@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd">
+ <container display="flex">
+ 
+  <span content="component-01" background="#fafafa"></span>
+  
+ </container>
+
+</template>

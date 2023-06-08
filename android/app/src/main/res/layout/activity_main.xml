@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainCl"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".demo.MainActivity"
+    android:background="#f6f6f6">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="列表展示"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="preview"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/previewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="preview list"
+        android:textAllCaps="false" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:paddingTop="200dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

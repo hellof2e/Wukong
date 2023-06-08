@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd" width="750" lifecycle="false">
+ <container background="#dedede" padding-vertical="20rpx" width="750rpx" display="flex" flex-direction="column" justify-content="center" align-items="center">
+  
+  <lottie src="https://assets9.lottiefiles.com/packages/lf20_CZva9peGiW.json" width="200rpx" height="200rpx" />
+
+  <img border-radius="10rpx" src="https://appstoreisvpic.alipayobjects.com/prod/d031e1ce-37f1-427e-b606-0d195e39e6a3.png" width="200rpx" height="200rpx" />
+ 
+ </container>
+</template>

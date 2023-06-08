@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd" width="750" lifecycle="false">
+ <container  background="#dedede" padding-vertical="20rpx" width="750rpx" display="flex" flex-direction="column" justify-content="space-around" align-items="center">
+
+   <container aspect-ratio="1" width="100%" display="flex" flex-direction="column" justify-content="space-around" align-items="center">
+
+      <progress height="20rpx" max-progress="100" border-radius="10rpx" progress="50" progress-color="#FF8A23" background="#FFFAE3" width="375rpx"/>
+    
+      <progress height="20rpx" max-progress="100" border-radius="10rpx" progress="10" progress-color="#FF8A23" background="linear-gradient(to right, #FFFAE3, #AAFAE3)" width="375rpx"/>
+    
+      <progress height="20rpx" max-progress="100" progress="50" progress-color="#FF8A23" background="#FFFAE3" width="375rpx"/>
+
+    </container>
+
+ </container>
+</template>

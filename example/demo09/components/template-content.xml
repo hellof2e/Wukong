@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd">
+ <container width="100%" display="flex" flex-direction="column">
+    
+    <container width="100%" display="flex" m-for="${contents}" padding-vertical="8rpx">
+    
+      <container display="flex" border-radius="12rpx" width="80rpx" height="107rpx">
+      
+        <img src="${listItem.cover}" width="100%" height="100%" />
+
+        <span content="$fs{ ${listItemIndex} + 1 }" background="${listItem.color}" width="20rpx" height="20rpx" color="#ffffff" text-align="center" font-size="14rpx" border-radius="8rpx 1rpx 8rpx 1rpx" position="absolute" top="0rpx" left="0rpx"></span>
+
+      </container>
+
+      <container padding-vertical="8rpx" height="107rpx" justify-content="space-between" padding-left="8rpx" display="flex" flex-direction="column" flex="1">
+      
+        <span content="${listItem.title}" font-size="18rpx" font-weight="bold" color="#222222"></span>
+        <text>
+          <keyword content="类型: " color="#626675" font-size="13rpx"/>
+          <keyword content="${listItem.type}" color="#626675" font-size="13rpx"/>
+        </text>
+        <text>
+          <keyword content="演员: " color="#626675" font-size="13rpx" />
+          <keyword content="${listItem.player}" color="#626675" font-size="13rpx" />
+        </text>
+
+        <container display="flex" width="100%">
+          <span max-rows="1" content="${listItem.content}" flex-shrink="1" padding-right="10rpx"></span>
+
+          <span content="查看更多>" color="#626675" font-size="13rpx"></span>
+        </container>
+
+      </container>
+
+
+    </container>
+ </container>
+</template>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml xmlns:android="http://schemas.android.com/apk/res/android">
+    <Container style="width:355px; height:90px; border: 1px solid #ccc; border-radius: 3px; display: flex; flex-direction: row; justify-content:space-between; align-items:center;background:#FFFFFF" data-action="click" data-action-url="https://www.baidu.com">
+        <Container style="display: flex; flex-direction: column; margin-left:20px;">
+            <Text style="font-size: 20px; color:#242729FF; font-weight: bold;">上海南 - 乌鲁木齐</Text>
+            <Container style="display: flex; align-items:center; margin-top: 4px; background:#FFFFFF">
+                <Text style="color:#879099FF;font-size: 13px;">优先出票 快人一步</Text>
+                <Img style="width:55px; height:23px; margin-left: 10px;" src="https://m.hellobike.com/resource/AHelloBikeMainH5/LiveMap/fCaK9HHB5z64t5RH-xWY2.png"/>
+            </Container>
+        </Container>
+        <Img style="width:110px; height:80px; margin-right:20px;" src="https://m.hellobike.com/resource/AHelloBikeMainH5/LiveMap/9rQBrNNgv03vZAjQbG_HU.png"/>
+    </Container>
+</xml>

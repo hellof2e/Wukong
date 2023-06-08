@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd" width="750" lifecycle="false">
+ <container background="#dedede" padding-vertical="20rpx" width="750rpx" display="flex" flex-direction="column" justify-content="center" align-items="center">
+ 
+  <component path="./component-01.xml" />
+  <component path="./component-02.xml" />
+  <component path="./component-03.xml" />
+  
+ </container>
+
+</template>

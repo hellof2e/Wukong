@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd" width="750" lifecycle="false">
+ <container background="#dedede" padding-vertical="20rpx" width="750rpx" display="flex" flex-direction="column" justify-content="space-around" align-items="center">
+  <!-- 如果列表项比较单一，item-key可以不用指定，同时 item-type 也可以不用指定 -->
+  <list list-data="${list}" item-key="${listItem.type}" background="#aaaaaa" padding-vertical="5rpx" padding-left="10rpx" clip-children="false" width="100%" height="160rpx" display="flex">
+    <!-- item-type=type01 -->
+    <item display="flex" item-type="type01" width="100rpx" height="150rpx" margin-right="10rpx">
+      <container width="100%" height="100%" border-radius="20rpx" background="#BDFCC9" display="flex" justify-content="center" align-items="center">
+        <span content="${listItem.type}"></span>
+      </container>
+    </item>
+    <!-- item-type=type02 --> 
+    <item display="flex" item-type="type02" width="100rpx" height="150rpx" margin-right="10rpx">
+      <container width="100%" height="100%" border-radius="20rpx" background="#A066D3" display="flex" justify-content="center" align-items="center">
+        <span content="${listItem.type}"></span>
+      </container>
+    </item>
+  </list>
+
+
+  <!-- 如果列表项比较单一，item-key可以不用指定，同时 item-type 也可以不用指定 -->
+  <list list-data="${list}" item-key="${listItem.type}" orientation="column" background="#aaaaaa" padding-vertical="5rpx" padding-horizontal="10rpx" clip-children="false" width="220rpx" height="450rpx" display="flex">
+    <!-- item-type=type01 -->
+    <item margin-top="5rpx" display="flex" item-type="type01" width="200rpx" height="150rpx" margin-right="10rpx">
+      <container width="100%" height="100%" border-radius="20rpx" background="#BDFCC9" display="flex" justify-content="center" align-items="center">
+        <span content="${listItem.type}"></span>
+      </container>
+    </item>
+    <!-- item-type=type02 --> 
+    <item margin-top="5rpx" display="flex" item-type="type02" width="200rpx" height="150rpx" margin-right="10rpx">
+      <container width="100%" height="100%" border-radius="20rpx" background="#A066D3" display="flex" justify-content="center" align-items="center">
+        <span content="${listItem.type}"></span>
+      </container>
+    </item>
+  </list>
+ </container>
+</template>

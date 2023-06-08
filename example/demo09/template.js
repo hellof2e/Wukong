@@ -1,0 +1,52 @@
+import './lib.wukong'
+export default {
+  data: {
+    message: "hello WuKong"
+  },
+  _datasource: [
+    {
+      "title": "灌篮高手",
+      "type": "动画",
+      "cover": "https://gips3.baidu.com/it/u=1592225586,1655032739&fm=3028&app=3028&f=PNG&fmt=auto&q=75&size=f200_266?x-bce-process=image/resize,m_fill,w_160,h_214",
+      "color": "#fe2d46",
+      "player": "宫原直树、北田胜彦",
+      "content": "「The First Slam Dunk」是《灌篮高手》首部大电影，也是最后一部！弥补青春遗憾的机会只此一次！宫城良田、三井寿、流川枫、樱木花道和赤木刚宪终于站在全国大赛的赛场，代表湘北高中与日本最强球队山王工业展开激烈对决。面对强大的对手，湘北五人组没有退缩，在安西教练的指导下，他们抱着破釜沉舟的决心热血奋战，究竟湘北能否取得比赛的最终胜利？承载好几代人热血梦想的全国大赛即将开赛，巅峰之战，就此一决！27年的等待即将划上完美句点，是时候跟自己的青春道别了！ "
+    },
+    {
+      "title": "银河护卫队3 ",
+      "type": "动作、科幻 ",
+      "cover": "https://fyb-2.cdn.bcebos.com/hotboard_image/a0871e8a938db6aff668f42f92b86946?x-bce-process=image/resize,m_fill,w_160,h_214",
+      "color": "#ff6600",
+      "player": "克里斯·帕拉特、佐伊·索尔达娜 ",
+      "content": "《银河护卫队3》是漫威影业出品、华特·迪士尼电影公司发行的科幻动作冒险电影，由克里斯·帕拉特、佐伊·索尔达娜主演，定于2023年5月5日上映。该片是银河护卫队系列的第三部电影，也是漫威电影宇宙的第五阶段的作品。"
+    },
+    {
+      "title": "满江红",
+      "type": "剧情、喜剧 ",
+      "cover": "https://fyb-2.cdn.bcebos.com/hotboard_image/74127492b983e844437c6e36970017da?x-bce-process=image/resize,m_fill,w_160,h_214",
+      "color": "#faa90e",
+      "player": " 沈腾、易烊千玺 ",
+      "content": "《满江红》是由陈宇、张艺谋编剧的电影。 "
+    }
+  ],
+  randomData() {
+    let size = this._datasource.length;
+    // 生成 [ n, m ) 范围内的随机数（大于等于n，小于m）
+    // Math.random()*(m-n)+n
+    let newContents = [];
+    for (let index = 0; index < 3; index++) {
+      let random = Math.random()*size;
+      let randomIndex = parseInt(random);
+      newContents.push(this._datasource[randomIndex]);
+    }
+    this.data.contents = newContents;
+  },
+  beforeCreate() {
+
+  },
+  doRefresh() {
+    console.log("换一批");
+    this.randomData();
+    this.wk.setState({});
+  }
+}

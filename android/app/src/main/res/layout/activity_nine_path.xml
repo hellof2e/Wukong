@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv00"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="2"
+            android:scaleType="fitXY"
+            android:src="@drawable/task_btn_bg_png" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv01"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/task_btn_bg" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv02"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/task_btn_bg_png" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv03"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view01"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/task_btn_bg_png" />
+
+        <View
+            android:id="@+id/view02"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view03"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</LinearLayout>

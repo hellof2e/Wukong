@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd" width="750" lifecycle="false" logic="./template.js">
+ <container background="#dedede" padding-vertical="20rpx" width="750rpx" display="flex" flex-direction="column">
+ 
+  <container padding-vertical="10rpx" display="flex" flex-direction="row" width="100%" background="#cccccc" justify-content="space-around">
+    <container display="flex" width="100rpx" height="100rpx" border-color="#ff0000" border-width="2rpx"></container>
+    <container display="flex" width="100rpx" height="100rpx" border-color="#ff0000" border-width="2rpx"></container>
+    <container display="flex" width="100rpx" height="100rpx" border-color="#ff0000" border-width="2rpx"></container>
+    <container display="flex" width="100rpx" height="100rpx" border-color="#ff0000" border-width="2rpx"></container>
+  </container>
+
+
+  <container padding-vertical="10rpx" margin-top="10rpx" background="#cccccc" justify-content="space-around" width="100%" display="flex" flex-direction="row" flex-wrap="wrap">
+    <container click-event="$f{doClickEvent()}" active-background="#ff0000" display="flex" width="200rpx" height="200rpx" border-color="#ff0000" border-width="2rpx"></container>
+    <container click-event="$f{doClickEvent()}" active-background="#00ff00" display="flex" width="200rpx" height="200rpx" border-color="#ff0000" border-width="2rpx"></container>
+    <container click-event="$f{doClickEvent()}" active-background="#0000ff" display="flex" width="200rpx" height="200rpx" border-color="#ff0000" border-width="2rpx"></container>
+    <container click-event="$f{doClickEvent()}" active-background="#ff00ff" display="flex" width="200rpx" height="200rpx" border-color="#ff0000" border-width="2rpx"></container>
+    <container click-event="$f{doClickEvent()}" active-background="#ffff00"  display="flex" width="200rpx" height="200rpx" border-color="#ff0000" border-width="2rpx"></container>
+  </container>
+
+ </container>
+</template>

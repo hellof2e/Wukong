@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6">
+
+<!--    <com.google.android.flexbox.FlexboxLayout-->
+<!--        android:id="@+id/testFl"-->
+<!--        android:layout_width="356dp"-->
+<!--        android:layout_height="90dp"-->
+<!--        app:alignItems="center"-->
+<!--        app:flexDirection="row"-->
+<!--        app:justifyContent="space_between"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:background="#ffffff">-->
+<!--        <com.google.android.flexbox.FlexboxLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:flexDirection="column"-->
+<!--            android:layout_marginLeft="20dp">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textColor="#f00000"-->
+<!--                android:text="上海is a nice city in my heart上海南-乌鲁木齐，上海南-乌鲁木齐"-->
+<!--                app:layout_flexGrow="1"-->
+<!--                app:layout_flexShrink="1"-->
+<!--                app:layout_flexBasisPercent="0%"-->
+<!--                android:maxLines="1"-->
+<!--                android:ellipsize="end">-->
+<!--            </TextView>-->
+<!--            <com.google.android.flexbox.FlexboxLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:alignItems="center"-->
+<!--                app:layout_maxWidth="192dp"-->
+<!--                android:background="#ffffff">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="优先出"-->
+<!--                    android:textSize="13sp"-->
+<!--                    android:textColor="#879099FF"-->
+<!--                    app:layout_flexGrow="1"-->
+<!--                    app:layout_flexShrink="1"-->
+<!--                    app:layout_flexBasisPercent="0%"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:ellipsize="end"/>-->
+<!--                <ImageView-->
+<!--                    android:layout_width="32dp"-->
+<!--                    android:layout_height="13dp"-->
+<!--                    android:src="@mipmap/check"-->
+<!--                    android:layout_marginLeft="5dp"/>-->
+<!--            </com.google.android.flexbox.FlexboxLayout>-->
+<!--        </com.google.android.flexbox.FlexboxLayout>-->
+<!--        <ImageView-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:src="@mipmap/test2"-->
+<!--            android:layout_marginRight="20dp"/>-->
+<!--    </com.google.android.flexbox.FlexboxLayout>-->
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="710dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        app:alignItems="center"
+        app:flexDirection="column"
+        app:justifyContent="space_between"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                app:alignItems="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="上海is a nice city in my heart上海南-乌鲁木齐，上海南-乌鲁木齐"
+                    android:textColor="#879099FF"
+                    android:textSize="13sp"
+                    app:layout_flexBasisPercent="0%"
+                    app:layout_flexGrow="1"
+                    app:layout_flexShrink="1" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="13dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/check" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/test2" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/test2" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:flexDirection="row"
+            app:layout_flexBasisPercent="0%"
+            app:layout_flexGrow="1"
+            app:layout_flexShrink="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="上海is a nice city in my heart上海南-乌鲁木齐，上海南-乌鲁木齐"
+                android:textColor="#f00000"
+                android:textSize="18sp"
+                app:layout_flexBasisPercent="0%"
+                app:layout_flexGrow="1"
+                app:layout_flexShrink="1"></TextView>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                app:alignItems="center"
+                app:layout_maxWidth="192dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="上海is a nice city in my heart上海南-乌鲁木齐，上海南-乌鲁木齐"
+                    android:textColor="#879099FF"
+                    android:textSize="13sp"
+                    app:layout_flexBasisPercent="0%"
+                    app:layout_flexGrow="1"
+                    app:layout_flexShrink="1" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="13dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/check" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/test2" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/test2" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

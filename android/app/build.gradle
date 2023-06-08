@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.hellobike.magiccube"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "6.99.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    packagingOptions {
+        exclude 'META-INF/shark.kotlin_module'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.3.0-alpha02'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(path: ':library-magiccube')
+
+    implementation 'com.google.android:flexbox:2.0.1'
+    implementation 'com.alibaba:fastjson:1.2.62'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3'
+    implementation "com.github.bumptech.glide:glide:3.7.0"
+    implementation 'io.github.taoweiji.quickjs:quickjs-android:1.4.6'
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
+
+    implementation 'com.facebook.yoga.android:yoga-layout:1.19.0'
+    implementation 'com.facebook.soloader:soloader:0.10.3'
+    implementation 'com.facebook.fbjni:fbjni:0.3.0'
+
+    implementation 'com.airbnb.android:lottie:6.0.0'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.8.1'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+}

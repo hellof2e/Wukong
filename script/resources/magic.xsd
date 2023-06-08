@@ -1,0 +1,678 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.w3school.com.cn" 
+    xmlns="http://www.w3school.com.cn"
+    elementFormDefault="qualified">
+
+
+
+    <!-- 以下为组件 -->
+    <!-- template 组件 -->
+    <xs:element name="template">
+
+      <xs:complexType>
+        <xs:choice maxOccurs="1">
+          <xs:element ref="container"></xs:element>
+
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" ref="click"></xs:element>
+            <xs:element minOccurs="0" maxOccurs="1" ref="expose"></xs:element>
+          </xs:sequence>
+        </xs:choice>
+
+        
+        <xs:attribute name="width" type="xs:integer"></xs:attribute>
+        <xs:attribute name="logic" type="xs:string" />
+        <xs:attribute name="lifecycle" type="xs:boolean"></xs:attribute>
+      </xs:complexType>
+
+
+    </xs:element>
+
+
+    <!-- list-view 的约束 -->
+    <xs:element name="list">
+      <xs:complexType>
+
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+          <xs:element ref="item"></xs:element>
+        </xs:choice>
+        
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-style-attrs-group"></xs:attributeGroup>
+
+        <xs:attributeGroup ref="container-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+
+        <xs:attribute name="orientation" type="orientation" />
+        <xs:attribute use="required" name="list-data" type="attr-variable-or-string"></xs:attribute>
+        <xs:attribute name="item-key" type="attr-variable-or-string"></xs:attribute>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- list-item 的约束 -->
+    <xs:element name="item">
+      <xs:complexType>
+
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="container"></xs:element>
+          <xs:element ref="text"></xs:element>
+          <xs:element ref="img"></xs:element>
+          <xs:element ref="span"></xs:element>
+          <xs:element ref="lottie"></xs:element>
+          <xs:element ref="customer"></xs:element>
+          <xs:element ref="progress"></xs:element>
+          <xs:element ref="counting"></xs:element>
+          <xs:element ref="component"></xs:element>
+        </xs:choice>
+        
+        <xs:attribute name="item-type" type="attr-string"></xs:attribute>
+
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-style-attrs-group"></xs:attributeGroup>
+
+        <xs:attributeGroup ref="container-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+
+      </xs:complexType>
+    </xs:element>
+
+
+    
+    <!-- container 的约束 -->
+    <xs:element name="container">
+      <xs:complexType>
+
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="container"></xs:element>
+          <xs:element ref="text"></xs:element>
+          <xs:element ref="img"></xs:element>
+          <xs:element ref="span"></xs:element>
+          <xs:element ref="lottie"></xs:element>
+          <xs:element ref="customer"></xs:element>
+          <xs:element ref="progress"></xs:element>
+          <xs:element ref="counting"></xs:element>
+          <xs:element ref="component"></xs:element>
+          <xs:element ref="list"></xs:element>
+        </xs:choice>
+        
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-style-attrs-group"></xs:attributeGroup>
+
+        <xs:attributeGroup ref="container-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-attrs-group"></xs:attributeGroup>
+      </xs:complexType>
+    </xs:element>
+
+
+
+    <!-- 倒计时 的约束 -->
+    <xs:element name="counting">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="container"></xs:element>
+          <xs:element ref="text"></xs:element>
+          <xs:element ref="img"></xs:element>
+          <xs:element ref="span"></xs:element>
+          <xs:element ref="lottie"></xs:element>
+          <xs:element ref="customer"></xs:element>
+          <xs:element ref="progress"></xs:element>
+          <xs:element ref="component"></xs:element>
+        </xs:choice>
+        
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-style-attrs-group"></xs:attributeGroup>
+
+        <xs:attributeGroup ref="container-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+
+        <!-- <xs:attribute name="count" type="attr-variable-or-double"></xs:attribute> -->
+        <xs:attribute name="clock-offset" type="attr-variable-or-double"></xs:attribute>
+        <xs:attribute name="deadline" type="attr-variable-or-double"></xs:attribute>
+        <xs:attribute name="interval" type="attr-variable-or-double"></xs:attribute>
+        <xs:attribute name="stop" type="attr-variable-or-double"></xs:attribute>
+        <xs:attribute name="counting-type" type="countingType"></xs:attribute>
+        <xs:attribute name="finish-event" type="attr-string"></xs:attribute>
+        <xs:attribute name="refresh-content" type="attr-string"></xs:attribute>
+        <xs:attributeGroup ref="common-attrs-group"></xs:attributeGroup>
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="component">
+      <xs:complexType>
+        <xs:attribute name="path" type="attr-path" use="required"></xs:attribute>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- text 约束 -->
+    <xs:element name="text">
+      <xs:complexType>
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+          <xs:element ref="keyword"></xs:element>
+          <xs:element ref="keyword-image"></xs:element>
+        </xs:choice>
+
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-style-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+        <xs:attribute name="max-rows" type="integer-attr"></xs:attribute>
+        <xs:attribute name="font-family" type="attr-string"></xs:attribute>
+        <xs:attribute name="text-align" type="text-align"></xs:attribute>
+        <xs:attribute name="i-font-family" type="attr-string"></xs:attribute>
+        <xs:attribute name="a-font-family" type="attr-string"></xs:attribute>
+        <xs:attributeGroup ref="common-attrs-group"></xs:attributeGroup>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- img 约束 -->
+    <xs:element name="img">
+      <xs:complexType>
+        <xs:attribute name="src" type="attr-string" use="required"></xs:attribute>
+        <xs:attribute name="fit" type="fit"></xs:attribute>
+
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-style-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-attrs-group"></xs:attributeGroup>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- span 约束 -->
+    <xs:element name="span">
+      <xs:complexType>
+
+        <xs:choice minOccurs="0"  maxOccurs="unbounded">
+          <xs:element ref="keyword"></xs:element>
+        </xs:choice>
+
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-style-attrs-group"></xs:attributeGroup>
+
+        <xs:attributeGroup ref="rich-text-attrs-group"></xs:attributeGroup>
+
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+        <xs:attribute name="max-rows" type="integer-attr"></xs:attribute>
+        <xs:attribute name="font-family" type="attr-string"></xs:attribute>
+        <xs:attribute name="text-align" type="text-align"></xs:attribute>
+        <xs:attribute name="i-font-family" type="attr-string"></xs:attribute>
+        <xs:attribute name="a-font-family" type="attr-string"></xs:attribute>
+        <xs:attributeGroup ref="common-attrs-group"></xs:attributeGroup>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- keyword 约束 -->
+    <xs:element name="keyword">
+      <xs:complexType>
+        <xs:attributeGroup ref="rich-text-attrs-group"></xs:attributeGroup>
+        <xs:attribute name="font-family" type="attr-string"></xs:attribute>
+        <xs:attribute name="i-font-family" type="attr-string"></xs:attribute>
+        <xs:attribute name="a-font-family" type="attr-string"></xs:attribute>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- keyword-image 约束 -->
+    <xs:element name="keyword-image">
+      <xs:complexType>
+        <xs:attribute name="url" type="attr-string"></xs:attribute>
+        <xs:attribute name="width" type="attr-string"></xs:attribute>
+        <xs:attribute name="height" type="attr-string"></xs:attribute>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- lottie 约束 -->
+    <xs:element name="lottie">
+      <xs:complexType>
+        <xs:attribute name="src" type="attr-string" use="required"></xs:attribute>
+        <xs:attribute name="fit" type="fit"></xs:attribute>
+
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-style-attrs-group"></xs:attributeGroup>
+
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-attrs-group"></xs:attributeGroup>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- progress 约束 -->
+    <xs:element name="progress">
+      <xs:complexType>
+
+        <xs:attribute name="progress" type="attr-string" />
+        <xs:attribute name="max-progress" type="attr-string" />
+        <xs:attribute name="progress-color" type="attr-color"/>
+        <xs:attribute name="border-radius" type="attr-radius" />
+        <xs:attribute name="background" type="attr-color" />
+
+        <!-- 通用 -->
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-attrs-group"></xs:attributeGroup>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- 自定义组件 -->
+    <xs:element name="customer">
+      <xs:complexType>
+        <xs:attributeGroup ref="common-layout-attrs-group"></xs:attributeGroup>
+        <xs:attributeGroup ref="common-style-attrs-group"></xs:attributeGroup>
+        <xs:attribute name="name" type="customer-name" use="required"></xs:attribute>
+        <xs:attributeGroup ref="common-attrs-group"></xs:attributeGroup>
+
+        <xs:attributeGroup ref="action-attrs-group"></xs:attributeGroup>
+      </xs:complexType>
+    </xs:element>
+
+    <!-- [ 以下为属性 ]-->
+    <xs:attributeGroup name="common-attrs-group">
+      <xs:attribute name="node-id" type="attr-string" />
+    </xs:attributeGroup>
+    <!-- [通用 layout 属性组] -->
+    <xs:attributeGroup name="common-layout-attrs-group">
+      <xs:attribute name="align-self" type="align-self" />
+      <xs:attribute name="flex" type="integer-attr" />
+      <xs:attribute name="flex-shrink" type="integer-attr" />
+      <xs:attribute name="flex-grow" type="integer-attr" />
+      <xs:attribute name="margin-left" type="px-rpx-value-attr" />
+      <xs:attribute name="margin-top" type="px-rpx-value-attr" />
+      <xs:attribute name="margin-right" type="px-rpx-value-attr" />
+      <xs:attribute name="margin-bottom" type="px-rpx-value-attr" />
+      <xs:attribute name="margin-horizontal" type="px-rpx-value-attr" />
+      <xs:attribute name="margin-vertical" type="px-rpx-value-attr" />
+      <xs:attribute name="padding-left" type="px-rpx-value-attr" />
+      <xs:attribute name="padding-top" type="px-rpx-value-attr" />
+      <xs:attribute name="padding-right" type="px-rpx-value-attr" />
+      <xs:attribute name="padding-bottom" type="px-rpx-value-attr" />
+      <xs:attribute name="padding-horizontal" type="px-rpx-value-attr" />
+      <xs:attribute name="padding-vertical" type="px-rpx-value-attr" />
+      <xs:attribute name="width" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="height" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="max-width" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="max-height" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="min-width" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="min-height" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="position" type="position" />
+      <xs:attribute name="top" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="left" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="right" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="bottom" type="px-rpx-percent-value-attr" />
+      <xs:attribute name="m-if" type="attr-string" />
+      <xs:attribute name="m-for" type="attr-string" />
+      <xs:attribute name="aspect-ratio" type="attr-string" />
+      <xs:attribute name="line-height" type="px-rpx-value-attr" />
+      <xs:attribute name="vertical-align" type="vertical-align" />
+    </xs:attributeGroup>
+
+    <!-- [ container layout 属性组] -->
+    <xs:attributeGroup name="container-layout-attrs-group">
+      <xs:attribute name="flex-direction" type="flex-direction" />
+      <xs:attribute name="justify-content" type="justify-content" />
+      <xs:attribute name="align-content" type="align-content" />
+      <xs:attribute name="align-items" type="align-items" />
+      <xs:attribute name="display" use="required" type="display" />
+      <xs:attribute name="flex-wrap" type="flex-wrap" />
+      <xs:attribute name="background-image" type="attr-string" />
+      <xs:attribute name="active-background-image" type="attr-string" />
+      <xs:attribute name="stretch" type="attr-stretch-string"/>
+      <xs:attribute name="clip-children" type="xs:boolean" default="true"/>  
+    </xs:attributeGroup>
+
+    <!-- [ style 属性组] -->
+    <xs:attributeGroup name="common-style-attrs-group">
+      <xs:attribute name="border-radius" type="attr-radius" />
+      <xs:attribute name="background" type="attr-color" />
+      <xs:attribute name="border-color" type="attr-string" />
+      <xs:attribute name="border-width" type="attr-string" />
+      <xs:attribute name="border-style" type="border-style" />
+      <xs:attribute name="opacity" type="attr-string" />
+
+      <!-- 激活状态下属性组 -->
+      <xs:attribute name="active-background" type="attr-color" />
+      <xs:attribute name="active-opacity" type="attr-string" />
+      <xs:attribute name="active-border-color" type="attr-string" />
+
+    </xs:attributeGroup>
+
+    <!-- [ richtext 属性组 ] -->
+    <xs:attributeGroup name="rich-text-attrs-group">
+      <xs:attribute name="content" type="attr-string"  use="required" />
+      <xs:attribute name="color" type="attr-string" />
+      <xs:attribute name="font-size" type="attr-string" />
+      <xs:attribute name="font-weight" type="font-weight" />
+      <xs:attribute name="text-decoration-line" type="text-decoration-line"/>
+    </xs:attributeGroup>
+
+    <!-- [ action 属性组 ] -->
+    <xs:attributeGroup name="action-attrs-group">
+      <xs:attribute name="url" type="attr-string" />
+      <xs:attribute name="action" type="attr-path" />
+      <xs:attribute name="click-event" type="attr-string" />
+    </xs:attributeGroup>
+
+    <!-- 定义 display 属性 -->
+    <xs:simpleType name="display">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="flex"></xs:enumeration>
+        <xs:enumeration value="none"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 定义 flex-direction 属性 -->
+    <xs:simpleType name="flex-direction">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="row"></xs:enumeration>
+        <xs:enumeration value="column"></xs:enumeration>
+        <xs:enumeration value="row-reverse"></xs:enumeration>
+        <xs:enumeration value="column-reverse"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+     <!-- 定义 flex-direction 属性 -->
+     <xs:simpleType name="orientation">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="row"></xs:enumeration>
+        <xs:enumeration value="column"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 定义 flex-direction 属性 -->
+    <xs:simpleType name="justify-content">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="flex-start"></xs:enumeration>
+        <xs:enumeration value="flex-end"></xs:enumeration>
+        <xs:enumeration value="center"></xs:enumeration>
+        <xs:enumeration value="space-between"></xs:enumeration>
+        <xs:enumeration value="space-around"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 定义 align-content 属性 -->
+    <xs:simpleType name="align-content">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="flex-start"></xs:enumeration>
+        <xs:enumeration value="flex-end"></xs:enumeration>
+        <xs:enumeration value="center"></xs:enumeration>
+        <xs:enumeration value="space-between"></xs:enumeration>
+        <xs:enumeration value="space-around"></xs:enumeration>
+        <xs:enumeration value="stretch"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 定义 align-items 属性 -->
+    <xs:simpleType name="align-items">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="flex-start"></xs:enumeration>
+        <xs:enumeration value="flex-end"></xs:enumeration>
+        <xs:enumeration value="center"></xs:enumeration>
+        <xs:enumeration value="baseline"></xs:enumeration>
+        <xs:enumeration value="stretch"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 定义 align-self 属性 -->
+    <xs:simpleType name="align-self">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="auto"></xs:enumeration>
+        <xs:enumeration value="flex-start"></xs:enumeration>
+        <xs:enumeration value="flex-end"></xs:enumeration>
+        <xs:enumeration value="center"></xs:enumeration>
+        <xs:enumeration value="baseline"></xs:enumeration>
+        <xs:enumeration value="stretch"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 定义 flex-wrap 属性 -->
+    <xs:simpleType name="flex-wrap">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="wrap"></xs:enumeration>
+        <xs:enumeration value="nowrap"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 定义 position 属性 -->
+    <xs:simpleType name="position">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="absolute"></xs:enumeration>
+        <xs:enumeration value="relative"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+     <!-- 定义 position 属性 -->
+     <xs:simpleType name="text-align">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="left"></xs:enumeration>
+        <xs:enumeration value="center"></xs:enumeration>
+        <xs:enumeration value="right"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+     <!-- 定义 integer value 属性 -->
+     <xs:simpleType name="integer-attr">
+      <xs:restriction base="xs:integer"></xs:restriction>
+    </xs:simpleType>
+
+
+
+    <!-- 定义 rpx px 数值类型 属性 -->
+    <xs:simpleType name="px-rpx-value-attr">
+      <xs:restriction base="xs:string">
+        <xs:pattern value="((-|\+)?\d+(\.\d+)?)(rpx|px)"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- 定义 px rpx % 数值类型 属性 -->
+    <xs:simpleType name="px-rpx-percent-value-attr">
+      <xs:restriction base="xs:string">
+        <xs:pattern value="((-|\+)?\d+(\.\d+)?)(rpx|px|%)"/>
+      </xs:restriction>
+    </xs:simpleType>
+   
+
+    <!-- 定义 border-style 属性 -->
+    <xs:simpleType name="border-style">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="solid" />
+        <xs:enumeration value="dashed" />
+      </xs:restriction>
+    </xs:simpleType>
+
+
+   
+     <!-- 定义 font-weight 属性 -->
+    <xs:simpleType name="font-weight">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="normal" />
+        <xs:enumeration value="bold" />
+        <xs:enumeration value="regular" />
+        <xs:enumeration value="medium" />
+        <xs:enumeration value="semibold" />
+      </xs:restriction>
+    </xs:simpleType>
+
+     <!-- 定义 font-weight 属性 -->
+     <xs:simpleType name="vertical-align">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="top" />
+        <xs:enumeration value="middle" />
+        <xs:enumeration value="bottom" />
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 定义 text-decoration-line 属性 -->
+    <xs:simpleType name="text-decoration-line">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none" />
+      <xs:enumeration value="underline" />
+      <xs:enumeration value="line-through" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- 定义 text-decoration-style 属性 -->
+  <xs:simpleType name="text-decoration-style">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="solid" />
+      <xs:enumeration value="double" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- 定义 fit 属性 -->
+  <xs:simpleType name="fit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="fill" />
+      <xs:enumeration value="contain" />
+      <xs:enumeration value="cover" />
+      <xs:enumeration value="aspectFit" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 定义 fit 属性 -->
+  <xs:simpleType name="countingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="time"/>
+      <xs:enumeration value="datetime" />
+      <!-- <xs:enumeration value="number" /> -->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 定义自定义组件name的规则 -->
+  <xs:simpleType name="customer-name">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="c-([a-z,A-Z,0-9,-]+)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- 定义自定义组件 string 的规则 -->
+  <xs:simpleType name="attr-string">
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+
+    <!-- 定义自定义组件 string 的规则 -->
+    <xs:simpleType name="attr-color">
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\$\{[A-Za-z0-9_.\[\]]+\}"></xs:pattern>
+        <xs:pattern value="#\w{6}"></xs:pattern>
+        <xs:pattern value="#\w{8}"></xs:pattern>
+        <xs:pattern value="linear-gradient\(to (left|right|bottom|top|right bottom|right top|left top|left bottom)((,|, )#\w{6}( ([1-9]\d?|0|100)%)?){1,}\)"></xs:pattern>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 圆角规则 的规则 -->
+    <xs:simpleType name="attr-radius">
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\$\{[A-Za-z0-9_.\[\]]+\}"></xs:pattern>
+        <xs:pattern value="((-|\+)?\d+(\.\d+)?)(rpx|px)"/>
+        <xs:pattern value="((-|\+)?\d+(\.\d+)?)(rpx|px) ((-|\+)?\d+(\.\d+)?)(rpx|px) ((-|\+)?\d+(\.\d+)?)(rpx|px) ((-|\+)?\d+(\.\d+)?)(rpx|px)"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+   <!-- 本地参数 的规则 -->
+   <xs:simpleType name="attr-path">  
+    <xs:restriction base="xs:string"></xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- 参数 的规则 -->
+  <xs:simpleType name="attr-args">
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  
+
+  <!-- 变量或字符串 的规则 -->
+  <xs:simpleType name="attr-variable-or-string">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\$\{[A-Za-z0-9_.\[\]]，+\}|\w+.*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 变量或整数 的规则 -->
+  <xs:simpleType name="attr-variable-or-integer">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\$\{[A-Za-z0-9_.]+\}|[1-9]\d*|0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 变量或浮点 的规则 -->
+  <xs:simpleType name="attr-variable-or-double">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\$\{[A-Za-z0-9_.]+\}|[+]{0,1}(\d+)*(\.\d+)?"/>
+      <xs:pattern value="\$f[fisb]\{[\w()]+.*\}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 定义自定义组件 string 的规则 -->
+  <xs:simpleType name="attr-stretch-string">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\$\{[A-Za-z0-9_.]+\}|([+]{0,1}(\d+)*,){3}[+]{0,1}(\d+)*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+    
+<!-- Action -->
+     <!-- container 的约束 -->
+     <xs:element name="action">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="click"></xs:element>
+        </xs:choice>        
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="timer">
+    </xs:element>
+
+    <xs:element name="click">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="report"></xs:element>
+        </xs:choice>
+
+        <xs:attribute name="url" type="attr-string" />
+      </xs:complexType>
+    </xs:element>
+
+    <xs:element name="expose">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="report" type="exposeReport" />
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="sync-arg">
+      <xs:complexType>
+        <xs:attribute name="key" type="attr-string" use="required" />
+        <xs:attribute name="value" type="attr-string" use="required"/>
+      </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="report">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded" >
+          <xs:element ref="bus-info-arg"></xs:element>
+        </xs:choice>
+        <xs:attribute name="bus-info" type="attr-args" />
+      </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="exposeReport">
+      <xs:choice minOccurs="0" maxOccurs="unbounded" >
+        <xs:element ref="bus-info-arg"></xs:element>
+      </xs:choice>
+      <xs:attribute name="bus-info" type="attr-args" />
+    </xs:complexType>
+
+    <xs:element name="bus-info-arg">
+      <xs:complexType>
+        <xs:attribute name="key" type="attr-string" use="required" />
+        <xs:attribute name="value" type="attr-string" use="required"/>
+      </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

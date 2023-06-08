@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21A524B12A0A1F580019187F /* JYDemoPreviewBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A524AE2A0A1F580019187F /* JYDemoPreviewBaseViewController.m */; };
+		21A524B22A0A1F580019187F /* JYDemoPreviewSingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A524B02A0A1F580019187F /* JYDemoPreviewSingleViewController.m */; };
+		21A524B62A0A20690019187F /* JYMCWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A524B52A0A20690019187F /* JYMCWebSocket.m */; };
+		21A524CD2A0A2EC30019187F /* JYWKJSEngineEventAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A524BD2A0A2EC30019187F /* JYWKJSEngineEventAdapter.m */; };
+		21A524CE2A0A2EC30019187F /* JYWKJSEngineLocalAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A524BE2A0A2EC30019187F /* JYWKJSEngineLocalAdapter.m */; };
+		21A524D12A0A2EC30019187F /* JYWKJSEngineTrackAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A524C62A0A2EC30019187F /* JYWKJSEngineTrackAdapter.m */; };
+		21A524D22A0A2EC30019187F /* JYWKJSEngineToastAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A524C72A0A2EC30019187F /* JYWKJSEngineToastAdapter.m */; };
+		21A524D42A0A2EC30019187F /* JYWKJSEngineCacheAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A524CB2A0A2EC30019187F /* JYWKJSEngineCacheAdapter.m */; };
+		21A524D82A0A33400019187F /* JYWKJSEngineAlertInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A524D62A0A33400019187F /* JYWKJSEngineAlertInfo.m */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* JYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* JYAppDelegate.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		71C48FDD716015654B8C8FF9 /* Pods_JYMagicCube_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CD09C7AE8FA1149136A136 /* Pods_JYMagicCube_Example.framework */; };
+		74515EE12A1504F800D81802 /* JYTestPayExportHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 74515EE02A1504F800D81802 /* JYTestPayExportHandler.m */; };
+		74515EE62A15FE1700D81802 /* JYWKJSEngineLogAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74515EE52A15FE1700D81802 /* JYWKJSEngineLogAdapter.m */; };
+		74675DBE2A1CEC6C0022AE16 /* JYTestShareExportHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 74675DBD2A1CEC6C0022AE16 /* JYTestShareExportHandler.m */; };
+		7467EE422A08D07100C4E62E /* JYTestTrackAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7467EE3D2A08D07100C4E62E /* JYTestTrackAdapter.m */; };
+		74F84BEA2A1CC48200286B54 /* UIDevice+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F84BE92A1CC48200286B54 /* UIDevice+JY.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = JYMagicCube;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00CD09C7AE8FA1149136A136 /* Pods_JYMagicCube_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYMagicCube_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06A25FA85005C2ABB344E01C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		21A524AD2A0A1F580019187F /* JYDemoPreviewSingleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYDemoPreviewSingleViewController.h; sourceTree = "<group>"; };
+		21A524AE2A0A1F580019187F /* JYDemoPreviewBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYDemoPreviewBaseViewController.m; sourceTree = "<group>"; };
+		21A524AF2A0A1F580019187F /* JYDemoPreviewBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYDemoPreviewBaseViewController.h; sourceTree = "<group>"; };
+		21A524B02A0A1F580019187F /* JYDemoPreviewSingleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYDemoPreviewSingleViewController.m; sourceTree = "<group>"; };
+		21A524B42A0A20690019187F /* JYMCWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMCWebSocket.h; sourceTree = "<group>"; };
+		21A524B52A0A20690019187F /* JYMCWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMCWebSocket.m; sourceTree = "<group>"; };
+		21A524B82A0A2EC30019187F /* JYWKJSEngineLocalAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYWKJSEngineLocalAdapter.h; sourceTree = "<group>"; };
+		21A524BA2A0A2EC30019187F /* JYWKJSEngineCacheAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYWKJSEngineCacheAdapter.h; sourceTree = "<group>"; };
+		21A524BB2A0A2EC30019187F /* JYWKJSEngineToastAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYWKJSEngineToastAdapter.h; sourceTree = "<group>"; };
+		21A524BC2A0A2EC30019187F /* JYWKJSEngineTrackAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYWKJSEngineTrackAdapter.h; sourceTree = "<group>"; };
+		21A524BD2A0A2EC30019187F /* JYWKJSEngineEventAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWKJSEngineEventAdapter.m; sourceTree = "<group>"; };
+		21A524BE2A0A2EC30019187F /* JYWKJSEngineLocalAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWKJSEngineLocalAdapter.m; sourceTree = "<group>"; };
+		21A524C52A0A2EC30019187F /* JYWKJSEngineEventAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYWKJSEngineEventAdapter.h; sourceTree = "<group>"; };
+		21A524C62A0A2EC30019187F /* JYWKJSEngineTrackAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWKJSEngineTrackAdapter.m; sourceTree = "<group>"; };
+		21A524C72A0A2EC30019187F /* JYWKJSEngineToastAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWKJSEngineToastAdapter.m; sourceTree = "<group>"; };
+		21A524CB2A0A2EC30019187F /* JYWKJSEngineCacheAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWKJSEngineCacheAdapter.m; sourceTree = "<group>"; };
+		21A524D62A0A33400019187F /* JYWKJSEngineAlertInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWKJSEngineAlertInfo.m; sourceTree = "<group>"; };
+		21A524D72A0A33400019187F /* JYWKJSEngineAlertInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYWKJSEngineAlertInfo.h; sourceTree = "<group>"; };
+		276E86E12531D33300FD0220 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6003F58A195388D20070C39A /* JYMagicCube_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYMagicCube_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* JYMagicCube-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JYMagicCube-Info.plist"; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* JYMagicCube-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JYMagicCube-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* JYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* JYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* JYMagicCube_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYMagicCube_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6B3995E34E5F64257314859E /* Pods-JYMagicCube_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYMagicCube_Example.debug.xcconfig"; path = "Target Support Files/Pods-JYMagicCube_Example/Pods-JYMagicCube_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74515EDF2A1504F800D81802 /* JYTestPayExportHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYTestPayExportHandler.h; sourceTree = "<group>"; };
+		74515EE02A1504F800D81802 /* JYTestPayExportHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYTestPayExportHandler.m; sourceTree = "<group>"; };
+		74515EE42A15FE1700D81802 /* JYWKJSEngineLogAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYWKJSEngineLogAdapter.h; sourceTree = "<group>"; };
+		74515EE52A15FE1700D81802 /* JYWKJSEngineLogAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWKJSEngineLogAdapter.m; sourceTree = "<group>"; };
+		74675DBC2A1CEC6C0022AE16 /* JYTestShareExportHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYTestShareExportHandler.h; sourceTree = "<group>"; };
+		74675DBD2A1CEC6C0022AE16 /* JYTestShareExportHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYTestShareExportHandler.m; sourceTree = "<group>"; };
+		7467EE372A08D07100C4E62E /* JYTestTrackAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTestTrackAdapter.h; sourceTree = "<group>"; };
+		7467EE3D2A08D07100C4E62E /* JYTestTrackAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTestTrackAdapter.m; sourceTree = "<group>"; };
+		74F84BE82A1CC48100286B54 /* UIDevice+JY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JY.h"; sourceTree = "<group>"; };
+		74F84BE92A1CC48200286B54 /* UIDevice+JY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JY.m"; sourceTree = "<group>"; };
+		9415D067260AA90006966B19 /* Pods-JYMagicCube_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYMagicCube_Example.release.xcconfig"; path = "Target Support Files/Pods-JYMagicCube_Example/Pods-JYMagicCube_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A9C9BBC54C330BA40B7F62D3 /* JYMagicCube.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JYMagicCube.podspec; path = ../JYMagicCube.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B882DA3925FF5E6B00B7B458 /* libYogaKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libYogaKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				71C48FDD716015654B8C8FF9 /* Pods_JYMagicCube_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21A524B32A0A20690019187F /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				21A524B42A0A20690019187F /* JYMCWebSocket.h */,
+				21A524B52A0A20690019187F /* JYMCWebSocket.m */,
+			);
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		21A524B72A0A2EC30019187F /* JSAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				21A524BA2A0A2EC30019187F /* JYWKJSEngineCacheAdapter.h */,
+				21A524CB2A0A2EC30019187F /* JYWKJSEngineCacheAdapter.m */,
+				21A524C52A0A2EC30019187F /* JYWKJSEngineEventAdapter.h */,
+				21A524BD2A0A2EC30019187F /* JYWKJSEngineEventAdapter.m */,
+				21A524B82A0A2EC30019187F /* JYWKJSEngineLocalAdapter.h */,
+				21A524BE2A0A2EC30019187F /* JYWKJSEngineLocalAdapter.m */,
+				21A524BB2A0A2EC30019187F /* JYWKJSEngineToastAdapter.h */,
+				21A524C72A0A2EC30019187F /* JYWKJSEngineToastAdapter.m */,
+				21A524BC2A0A2EC30019187F /* JYWKJSEngineTrackAdapter.h */,
+				21A524C62A0A2EC30019187F /* JYWKJSEngineTrackAdapter.m */,
+				74515EE42A15FE1700D81802 /* JYWKJSEngineLogAdapter.h */,
+				74515EE52A15FE1700D81802 /* JYWKJSEngineLogAdapter.m */,
+				21A524D52A0A33400019187F /* Model */,
+			);
+			path = JSAdapters;
+			sourceTree = "<group>";
+		};
+		21A524D52A0A33400019187F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21A524D62A0A33400019187F /* JYWKJSEngineAlertInfo.m */,
+				21A524D72A0A33400019187F /* JYWKJSEngineAlertInfo.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A39E8ABCC3FFAE5DC9764AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B3995E34E5F64257314859E /* Pods-JYMagicCube_Example.debug.xcconfig */,
+				9415D067260AA90006966B19 /* Pods-JYMagicCube_Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* Example for JYMagicCube */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				4A39E8ABCC3FFAE5DC9764AF /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* JYMagicCube_Example.app */,
+				6003F5AE195388D20070C39A /* JYMagicCube_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B882DA3925FF5E6B00B7B458 /* libYogaKit.a */,
+				276E86E12531D33300FD0220 /* libc++.tbd */,
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				00CD09C7AE8FA1149136A136 /* Pods_JYMagicCube_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* Example for JYMagicCube */ = {
+			isa = PBXGroup;
+			children = (
+				74515EDE2A1503BA00D81802 /* ExportObjs */,
+				21A524B72A0A2EC30019187F /* JSAdapters */,
+				21A524B32A0A20690019187F /* WebSocket */,
+				7467EE362A08D07100C4E62E /* MCAdapters */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = "Example for JYMagicCube";
+			path = JYMagicCube;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21A524AF2A0A1F580019187F /* JYDemoPreviewBaseViewController.h */,
+				21A524AE2A0A1F580019187F /* JYDemoPreviewBaseViewController.m */,
+				21A524AD2A0A1F580019187F /* JYDemoPreviewSingleViewController.h */,
+				21A524B02A0A1F580019187F /* JYDemoPreviewSingleViewController.m */,
+				74F84BE82A1CC48100286B54 /* UIDevice+JY.h */,
+				74F84BE92A1CC48200286B54 /* UIDevice+JY.m */,
+				6003F59C195388D20070C39A /* JYAppDelegate.h */,
+				6003F59D195388D20070C39A /* JYAppDelegate.m */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F595195388D20070C39A /* JYMagicCube-Info.plist */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* JYMagicCube-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				A9C9BBC54C330BA40B7F62D3 /* JYMagicCube.podspec */,
+				06A25FA85005C2ABB344E01C /* README.md */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		74515EDE2A1503BA00D81802 /* ExportObjs */ = {
+			isa = PBXGroup;
+			children = (
+				74515EDF2A1504F800D81802 /* JYTestPayExportHandler.h */,
+				74515EE02A1504F800D81802 /* JYTestPayExportHandler.m */,
+				74675DBC2A1CEC6C0022AE16 /* JYTestShareExportHandler.h */,
+				74675DBD2A1CEC6C0022AE16 /* JYTestShareExportHandler.m */,
+			);
+			path = ExportObjs;
+			sourceTree = "<group>";
+		};
+		7467EE362A08D07100C4E62E /* MCAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				7467EE372A08D07100C4E62E /* JYTestTrackAdapter.h */,
+				7467EE3D2A08D07100C4E62E /* JYTestTrackAdapter.m */,
+			);
+			path = MCAdapters;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* JYMagicCube_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "JYMagicCube_Example" */;
+			buildPhases = (
+				69B2EB9591B9AEEB3CF3375A /* [CP] Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				84B88FD19C381657C1DD01DE /* [CP] Copy Pods Resources */,
+				DF86A7292E6E85C36AE14C0F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JYMagicCube_Example;
+			productName = JYMagicCube;
+			productReference = 6003F58A195388D20070C39A /* JYMagicCube_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* JYMagicCube_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "JYMagicCube_Tests" */;
+			buildPhases = (
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = JYMagicCube_Tests;
+			productName = JYMagicCubeTests;
+			productReference = 6003F5AE195388D20070C39A /* JYMagicCube_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JY;
+				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = "姜灿明";
+				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 2HMG43AYW9;
+						LastSwiftMigration = 1120;
+						ProvisioningStyle = Manual;
+					};
+					6003F5AD195388D20070C39A = {
+						ProvisioningStyle = Manual;
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "JYMagicCube" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* JYMagicCube_Example */,
+				6003F5AD195388D20070C39A /* JYMagicCube_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69B2EB9591B9AEEB3CF3375A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JYMagicCube_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84B88FD19C381657C1DD01DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JYMagicCube_Example/Pods-JYMagicCube_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/JYMagicCube/JYMagicCube.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JYMagicCube.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JYMagicCube_Example/Pods-JYMagicCube_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF86A7292E6E85C36AE14C0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JYMagicCube_Example/Pods-JYMagicCube_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JYMagicCube_Example/Pods-JYMagicCube_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F59E195388D20070C39A /* JYAppDelegate.m in Sources */,
+				21A524D42A0A2EC30019187F /* JYWKJSEngineCacheAdapter.m in Sources */,
+				74515EE12A1504F800D81802 /* JYTestPayExportHandler.m in Sources */,
+				21A524B22A0A1F580019187F /* JYDemoPreviewSingleViewController.m in Sources */,
+				7467EE422A08D07100C4E62E /* JYTestTrackAdapter.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+				21A524B62A0A20690019187F /* JYMCWebSocket.m in Sources */,
+				21A524CE2A0A2EC30019187F /* JYWKJSEngineLocalAdapter.m in Sources */,
+				21A524D82A0A33400019187F /* JYWKJSEngineAlertInfo.m in Sources */,
+				74F84BEA2A1CC48200286B54 /* UIDevice+JY.m in Sources */,
+				21A524B12A0A1F580019187F /* JYDemoPreviewBaseViewController.m in Sources */,
+				74675DBE2A1CEC6C0022AE16 /* JYTestShareExportHandler.m in Sources */,
+				21A524D12A0A2EC30019187F /* JYWKJSEngineTrackAdapter.m in Sources */,
+				21A524D22A0A2EC30019187F /* JYWKJSEngineToastAdapter.m in Sources */,
+				74515EE62A15FE1700D81802 /* JYWKJSEngineLogAdapter.m in Sources */,
+				21A524CD2A0A2EC30019187F /* JYWKJSEngineEventAdapter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* JYMagicCube_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71719F9E1E33DC2100824A3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B3995E34E5F64257314859E /* Pods-JYMagicCube_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JYMagicCube/JYMagicCube-Prefix.pch";
+				INFOPLIST_FILE = "JYMagicCube/JYMagicCube-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = JYMagicCubeDemo;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
+				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YYCategories\"",
+					"-framework",
+					"\"YogaKit\"",
+					"-framework",
+					"\"yoga\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hellobike.wukong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JYMagicCube/JYMagicCube_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9415D067260AA90006966B19 /* Pods-JYMagicCube_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JYMagicCube/JYMagicCube-Prefix.pch";
+				INFOPLIST_FILE = "JYMagicCube/JYMagicCube-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = JYMagicCubeDemo;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
+				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YYCategories\"",
+					"-framework",
+					"\"YogaKit\"",
+					"-framework",
+					"\"yoga\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hellobike.wukong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JYMagicCube/JYMagicCube_Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JYMagicCube_Example.app/JYMagicCube_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JYMagicCube_Example.app/JYMagicCube_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "JYMagicCube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "JYMagicCube_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "JYMagicCube_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}

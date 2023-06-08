@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd" width="375" logic="./template.js" lifecycle="true">
+ <container padding-horizontal="12rpx" padding-vertical="12rpx" border-radius="12rpx" background="#ffffff" width="375rpx" display="flex" flex-direction="column">
+  
+  <component path="./components/template-title.xml" />
+
+  <component path="./components/template-content.xml" />
+
+  <span click-event="$f{doRefresh()}" font-size="14rpx" padding-horizontal="10rpx" padding-vertical="5rpx" align-self="center" color="#000000" content="换一批"></span>
+
+ </container>
+</template>

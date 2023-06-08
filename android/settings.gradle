@@ -1,0 +1,3 @@
+include ':library-magiccube'
+include ':app'
+rootProject.name = "exmaple"

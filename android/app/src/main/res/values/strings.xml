@@ -1,0 +1,1017 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">悟空preview</string>
+
+    <string name="test_json">{
+  \"type\": \"container\",
+  \"style\": {
+    \"border-radius\": \"32rpx\",
+  },
+  \"layout\": {
+    \"width\": \"702rpx\",
+    \"padding-top\": \"34rpx\",
+    \"padding-bottom\": \"32rpx\",
+    \"padding-left\": \"32rpx\",
+    \"display\": \"flex\",
+    \"flex-direction\": \"column\"
+  },
+  \"children\": [
+    {
+      \"type\": \"container\",
+      \"layout\": {
+        \"display\": \"flex\",
+        \"padding-right\": \"16px\",
+        \"flex-direction\": \"row\",
+        \"width\": \"100%\"
+      },
+      \"style\": {
+
+      },
+      \"children\": [
+        {
+          \"type\": \"text\",
+          \"max-rows\": 1,
+          \"layout\": {
+            \"display\": \"flex\",
+            \"flex\": 1
+          },
+          \"style\": {
+
+          },
+          \"text\": [
+            {
+              \"font-size\": \"18px\",
+              \"font-weight\": \"bold\",
+              \"color\": \"#000000\",
+              \"content\": \"任务中心\"
+            }
+          ]
+        },
+        {
+          \"type\": \"container\",
+          \"layout\": {
+            \"display\": \"flex\",
+            \"flex-direction\": \"row\",
+            \"align-items\": \"center\"
+          },
+          \"style\": {
+
+          },
+          \"m-if\": \"$fb{\'${showMoreTaskLink}\'!=\'null\'&amp;&amp;\'${showMoreTaskLink}\'!=\\\"\\\"}\",
+          \"action\": {
+            \"click\": {
+              \"url\": \"${showMoreTaskLink}\",
+              \"report\": {
+                \"pid\": \"${pageId}\",
+                \"cid\": \"market\",
+                \"buttonName\": \"market_train_clickmoretask\",
+                \"bus-info\": {
+                  \"sceneNameEn\": \"${sceneNameEn}\",
+                  \"subSceneNameEn\": \"${subSceneNameEn}\",
+                  \"userTag\": \"${listItem.userTag}\",
+                  \"taskSendType\": \"${listItem.taskSendType}\",
+                  \"taskcode\": \"${listItem.taskCode}\",
+                  \"taskGroupCode\": \"${listItem.taskGroupCode}\",
+                  \"taskname\": \"${listItem.taskname}\"
+                }
+              }
+            }
+          },
+          \"children\": [
+            {
+              \"type\": \"text\",
+              \"max-rows\": 1,
+              \"text\": [
+                {
+                  \"font-size\": \"12px\",
+                  \"font-weight\": \"normal\",
+                  \"color\": \"#000000\",
+                  \"content\": \"更多\"
+                }
+              ]
+            },
+            {
+              \"type\": \"img\",
+              \"layout\": {
+                \"width\": \"24rpx\",
+                \"height\": \"24rpx\"
+              },
+              \"src\": \"https://resource.51downapp.cn/right_arrow.png\"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      \"type\": \"container\",
+      \"m-for\": \"${taskList}\",
+      \"layout\": {
+        \"align-items\": \"center\",
+        \"display\": \"flex\",
+        \"flex-direction\": \"column\",
+        \"margin-top\": \"28rpx\",
+        \"width\": \"100%\"
+      },
+      \"children\": [
+        {
+          \"type\": \"container\",
+          \"layout\": {
+            \"align-items\": \"center\",
+            \"flex-direction\": \"row\",
+            \"width\": \"100%\"
+          },
+          \"action\": {
+            \"click\": {
+              \"url\": \"${listItem.landingPageUrl}\",
+              \"report\": {
+                \"buttonName\": \"market_task_clickdetail\",
+                \"cid\": \"market\",
+                \"pid\": \"${pageId}\",
+                \"bus-info\": {
+                  \"sceneNameEn\": \"${sceneNameEn}\",
+                  \"subSceneNameEn\": \"${subSceneNameEn}\",
+                  \"userTag\": \"${listItem.userTag}\",
+                  \"taskSendType\": \"${listItem.taskSendType}\",
+                  \"taskcode\": \"${listItem.taskCode}\",
+                  \"taskGroupCode\": \"${listItem.taskGroupCode}\",
+                  \"taskname\": \"${listItem.taskname}\"
+                }
+              }
+            }
+          },
+          \"children\": [
+            {
+              \"type\": \"text\",
+              \"max-rows\": 2,
+              \"layout\": {
+                \"flex-shrink\": 1
+              },
+              \"text\": [
+                {
+                  \"font-size\": \"14px\",
+                  \"font-weight\": \"bold\",
+                  \"color\": \"#000000\",
+                  \"content\": \"$fs{`${listItem.guideDesc}${listItem.guideAwardDesc}`}\"
+                }
+              ]
+            },
+            {
+              \"type\": \"img\",
+              \"m-if\": \"$fb{\'${listItem.landingPageUrl}\'!=\'null\'&amp;&amp;\'${listItem.landingPageUrl}\'!=\\\"\\\"}\",
+              \"layout\": {
+                \"width\": \"28rpx\",
+                \"height\": \"28rpx\"
+              },
+              \"src\": \"https://resource.51downapp.cn/right_arrow.png\"
+            }
+          ]
+        },
+        {
+          \"type\": \"container\",
+          \"layout\": {
+            \"padding-right\": \"32rpx\",
+            \"flex-direction\": \"row\",
+            \"align-items\": \"flex-start\",
+            \"width\": \"100%\"
+          },
+          \"children\": [
+            {
+              \"type\": \"container\",
+              \"layout\": {
+                \"flex-shrink\": 1,
+                \"flex-grow\": 1,
+                \"flex-direction\": \"column\",
+                \"align-items\": \"flex-start\",
+                \"justify-content\": \"center\"
+              },
+              \"children\": [
+                {
+                  \"type\": \"text\",
+                  \"max-rows\": 2,
+                  \"layout\": {
+                    \"margin-top\": \"14rpx\",
+                    \"justify-content\": \"flex-start\"
+                  },
+                  \"text\": [
+                    {
+                      \"font-size\": \"12px\",
+                      \"color\": \"#879099\",
+                      \"content\": \"${listItem.taskTimeRangeDesc}\"
+                    }
+                  ]
+                },
+                {
+                  \"type\": \"container\",
+                  \"layout\": {
+                    \"display\": \"flex\",
+                    \"flex-direction\": \"row\",
+                    \"margin-top\": \"12rpx\",
+                    \"align-items\": \"center\"
+                  },
+                  \"children\": [
+                    {
+                      \"type\": \"text\",
+                      \"max-rows\": 1,
+                      \"m-if\": \"$fb{`${listItem.taskStatus}`==\\\"RUNNING\\\"||`${listItem.taskStatus}`==\\\"FINISHED\\\"}\",
+                      \"text\": [
+                        {
+                          \"font-size\": \"12px\",
+                          \"color\": \"#FB990F\",
+                          \"content\": \"$fs{`进度${listItem.currentProgress}/${listItem.totalProgress}`}\"
+                        }
+                      ]
+                    },
+                    {
+                      \"type\": \"container\",
+                      \"style\": {
+                        \"border-radius\": \"4rpx\",
+                        \"background\": \"#F0F3F5\"
+                      },
+                      \"layout\": {
+                        \"display\": \"flex\",
+                        \"flex-direction\": \"row\",
+                        \"width\": \"120rpx\",
+                        \"height\": \"8rpx\",
+                        \"margin-left\": \"12rpx\"
+                      },
+                      \"m-if\": \"$fb{`${listItem.taskStatus}`==\\\"RUNNING\\\"||`${listItem.taskStatus}`==\\\"FINISHED\\\"}\",
+                      \"children\": [
+                        {
+                          \"type\": \"container\",
+                          \"style\": {
+                            \"border-radius\": \"4rpx\",
+                            \"background\": \"#FB990F\"
+                          },
+                          \"layout\": {
+                            \"flex\": \"${listItem.currentProgress}\",
+                            \"height\": \"8rpx\"
+                          }
+                        },
+                        {
+                          \"type\": \"container\",
+                          \"style\": {
+                            \"border-radius\": \"4rpx\",
+                            \"background\": \"#F0F3F5\"
+                          },
+                          \"layout\": {
+                            \"flex\": \"$fi{${listItem.totalProgress}-${listItem.currentProgress}}\",
+                            \"height\": \"8rpx\"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              \"type\": \"container\",
+              \"background-image\": \"https://resource.51downapp.cn/btn_bg_red.png\",
+              \"m-if\": \"$fb{`${listItem.taskStatus}`==\\\"INIT\\\"}\",
+              \"action\": {
+                \"click\": {
+                  \"url\": \"${listItem.btnLink.app}\",
+                  \"report\": {
+                    \"buttonName\": \"market_task_clickreceive\",
+                    \"cid\": \"market\",
+                    \"pid\": \"${pageId}\",
+                    \"bus-info\": {
+                      \"sceneNameEn\": \"${sceneNameEn}\",
+                      \"subSceneNameEn\": \"${subSceneNameEn}\",
+                      \"userTag\": \"${listItem.userTag}\",
+                      \"taskSendType\": \"${listItem.taskSendType}\",
+                      \"taskcode\": \"${listItem.taskCode}\",
+                      \"taskGroupCode\": \"${listItem.taskGroupCode}\",
+                      \"taskname\": \"${listItem.taskname}\"
+                    }
+                  }
+                }
+              },
+              \"layout\": {
+                \"display\": \"flex\",
+                \"margin-left\": \"34rpx\",
+                \"margin-top\": \"10rpx\",
+                \"width\": \"68px\",
+                \"height\": \"25px\",
+                \"justify-content\": \"center\",
+                \"align-items\": \"center\"
+              },
+              \"max-rows\": 1,
+              \"children\": [
+                {
+                  \"type\": \"text\",
+                  \"text\": [
+                    {
+                      \"font-size\": \"14px\",
+                      \"font-weight\": \"bold\",
+                      \"color\": \"#ffffff\",
+                      \"content\": \"${listItem.btnName}\"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              \"type\": \"container\",
+              \"style\": {
+                \"border-radius\": \"32rpx\",
+                \"border-width\": \"1rpx\",
+                \"border-color\": \"#F63733\",
+                \"border-style\": \"solid\"
+              },
+              \"m-if\": \"$fb{`${listItem.taskStatus}`==\\\"RUNNING\\\"}\",
+              \"action\": {
+                \"click\": {
+                  \"url\": \"${listItem.btnLink.app}\",
+                  \"report\": {
+                    \"buttonName\": \"market_task_clicktodo\",
+                    \"cid\": \"market\",
+                    \"pid\": \"${pageId}\",
+                    \"bus-info\": {
+                      \"sceneNameEn\": \"${sceneNameEn}\",
+                      \"subSceneNameEn\": \"${subSceneNameEn}\",
+                      \"userTag\": \"${listItem.userTag}\",
+                      \"taskSendType\": \"${listItem.taskSendType}\",
+                      \"taskcode\": \"${listItem.taskCode}\",
+                      \"taskGroupCode\": \"${listItem.taskGroupCode}\",
+                      \"taskname\": \"${listItem.taskname}\"
+                    }
+                  }
+                }
+              },
+              \"layout\": {
+                \"display\": \"flex\",
+                \"margin-left\": \"34rpx\",
+                \"width\": \"68px\",
+                \"height\": \"25px\",
+                \"justify-content\": \"center\",
+                \"align-items\": \"center\",
+                \"margin-top\": \"10rpx\"
+              },
+              \"max-rows\": 1,
+              \"children\": [
+                {
+                  \"type\": \"text\",
+                  \"text\": [
+                    {
+                      \"font-size\": \"14px\",
+                      \"font-weight\": \"bold\",
+                      \"color\": \"#F63733\",
+                      \"content\": \"${listItem.btnName}\"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              \"type\": \"container\",
+              \"background-image\": \"https://resource.51downapp.cn/btn_bg_orange.png\",
+              \"m-if\": \"$fb{`${listItem.taskStatus}`==\\\"FINISHED\\\"}\",
+              \"action\": {
+                \"click\": {
+                  \"url\": \"${listItem.btnLink.app}\",
+                  \"report\": {
+                    \"eid\": \"clickButton\",
+                    \"cid\": \"market\",
+                    \"pid\": \"${pageId}\",
+                    \"bus-info\": {
+                      \"buttonName\": \"market_task_recieveprize\",
+                      \"sceneNameEn\": \"${sceneNameEn}\",
+                      \"subSceneNameEn\": \"${subSceneNameEn}\",
+                      \"userTag\": \"${listItem.userTag}\",
+                      \"taskSendType\": \"${listItem.taskSendType}\",
+                      \"taskcode\": \"${listItem.taskCode}\",
+                      \"taskGroupCode\": \"${listItem.taskGroupCode}\",
+                      \"taskname\": \"${listItem.taskname}\"
+                    }
+                  }
+                }
+              },
+              \"layout\": {
+                \"display\": \"flex\",
+                \"margin-left\": \"34rpx\",
+                \"width\": \"68px\",
+                \"height\": \"25px\",
+                \"justify-content\": \"center\",
+                \"align-items\": \"center\",
+                \"margin-top\": \"10rpx\"
+              },
+              \"max-rows\": 1,
+              \"children\": [
+                {
+                  \"type\": \"text\",
+                  \"text\": [
+                    {
+                      \"font-size\": \"14px\",
+                      \"font-weight\": \"bold\",
+                      \"color\": \"#ffffff\",
+                      \"content\": \"${listItem.btnName}\"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      \"m-if\": \"$fb{${listItem.awardConfigType}==1}\"
+    }
+  ]
+}</string>
+
+    <string name="data_json">{
+       \"data\":{
+          \"taskList\":[
+            {
+              \"taskStatus\":\"INIT\",
+              \"btnLink\":{
+                \"app\":\"https://www.baidu.com\"
+              },
+              \"taskTimeRangeDesc\": \"\",
+              \"userTag\": \"userTag\",
+              \"taskCode\": \"taskCode\",
+              \"taskGroupCode\": \"taskGroupCode\",
+              \"taskName\": \"taskName\",
+              \"taskImgUrl\": \"taskImgUrl\",
+              \"guideDesc\": \"完成火车票首单任务，得9.9元奖励金\",
+              \"guideAwardDesc\": \"10月9日可领任务，单次骑30分钟，10月9日可领任务，单次骑30分钟，文字最多2行显示…\",
+              \"btnName\": \"领任务\",
+              \"totalProgress\": 3,
+              \"currentProgress\": 2,
+              \"startDate\": \"1630309080943\",
+              \"expireDate\": \"1630309080943\",
+              \"taskSendType\": 1,
+              \"awardConfigType\": \"1\",
+              \"landingPageUrl\":null
+            },
+            {
+              \"taskStatus\":\"RUNNING\",
+              \"btnLink\":{
+                \"app\":\"https://www.jd.com\"
+              },
+              \"userTag\": \"userTag\",
+              \"taskCode\": \"taskCode\",
+              \"taskGroupCode\": \"taskGroupCode\",
+              \"taskName\": \"taskName\",
+              \"taskImgUrl\": \"taskImgUrl\",
+              \"guideDesc\": \"新人得9.9元奖励金\",
+              \"guideAwardDesc\": \"10月9日可领任务，单次骑30分钟\",
+              \"btnName\": \"去完成\",
+              \"totalProgress\": 3,
+              \"currentProgress\": 2,
+              \"startDate\": \"1630309080943\",
+              \"expireDate\": \"1630309080943\",
+              \"taskSendType\": 1,
+              \"awardConfigType\": \"1\",
+              \"landingPageUrl\":\"https://www.jd.com\"
+            },
+            {
+              \"taskStatus\":\"FINISHED\",
+              \"btnLink\":{
+                \"app\":\"https://www.baidu.com\"
+              },
+              \"userTag\": \"userTag\",
+              \"taskCode\": \"taskCode\",
+              \"taskGroupCode\": \"taskGroupCode\",
+              \"taskName\": \"taskName\",
+              \"taskImgUrl\": \"taskImgUrl\",
+              \"guideDesc\": \"新人得9.9元奖励金\",
+              \"guideAwardDesc\": \"10月9日可领任务，单次骑30分钟\",
+              \"btnName\": \"去领取\",
+              \"totalProgress\": 3,
+              \"currentProgress\": 3,
+              \"startDate\": \"1630309080943\",
+              \"expireDate\": \"1630309080943\",
+              \"taskSendType\": 1,
+              \"awardConfigType\": \"1\",
+              \"landingPageUrl\":\"https://www.jd.com\"
+            },
+            {
+                    \"taskGroupCode\": \"TG5923251279771619\",
+                    \"taskCode\": \"TK5713970817251058\",
+                    \"taskName\": \"阶梯任务人工0903手动自动\",
+                    \"mainTitle\": \"阶梯任务人工0903手动自动展示名\",
+                    \"taskImgUrl\": \"\",
+                    \"taskSendType\": 1,
+                    \"actionStep\": 0,
+                    \"guideDesc\": \"完成阶梯任务人工0903，得\",
+                    \"guideAwardDesc\": \"111\",
+                    \"btnName\": \"领任务\",
+                    \"btnLink\": {
+                        \"app\": \"22\"
+                    },
+                    \"taskTimeRangeDesc\": \"9.3 00:00-9.30 23:59 阶梯任务人工0903\",
+                    \"additionalDesc\": \"阶梯任务人工0903\",
+                    \"taskStatus\": \"INIT\",
+                    \"totalProgress\": 5,
+                    \"offerWorth\": 30,
+                    \"awardConfigType\": 2,
+                    \"startDate\": \"2021-09-03 00:00:00\",
+                    \"expireDate\": \"2021-09-30 23:59:59\",
+                    \"userTags\": [],
+                    \"titleBarName\": \"阶梯任务08908\",
+                    \"titleBarUrl\": \"http://www.baidu.com\",
+                    \"titleBarBtnName\": \"领取任务\",
+                    \"progressUnitPrefix\": \"第\",
+                    \"progressUnit\": \"单\",
+                    \"baseIncomeAmount\": 0,
+                    \"stageOffers\": [
+                        {
+                            \"stageNo\": 1,
+                            \"offerDisplayName\": \"1\",
+                            \"stageEventGoal\": 1,
+                            \"offerStatus\": 0,
+                            \"totalAmount\": 10
+                        },
+                        {
+                            \"stageNo\": 2,
+                            \"offerDisplayName\": \"3\",
+                            \"stageEventGoal\": 3,
+                            \"offerStatus\": 0,
+                            \"totalAmount\": 10
+                        },
+                        {
+                            \"stageNo\": 3,
+                            \"offerDisplayName\": \"55\",
+                            \"stageEventGoal\": 5,
+                            \"offerStatus\": 0,
+                            \"totalAmount\": 10
+                        }
+                    ],
+                    \"taskActivityType\": 1,
+                    \"landingPageUrl\": \"http://m.hellobike.com/AppMarketingH5/fat/latest/index.html#/activityDetail?taskCode=TK5713970817251058&amp;taskGroupCode=TG5923251279771619&amp;sceneNameEn=ecoexpress_driv&amp;subSceneNameEn=ecodriv_app\",
+                    \"unReachPartThreshold\": false,
+                    \"newTaskFlag\": true,
+                    \"needNotify\": false,
+                    \"notifyType\": 1
+                }
+          ],
+          \"sceneNameEn\":\"sceneNameEn\",
+          \"subSceneNameEn\":\"subSceneNameEn\",
+          \"showMoreTaskLink\":\"https://www.baidu.com\",
+          \"pageId\":\"taskCenter\"
+        }}
+    </string>
+    <string name="test_json2">{
+        \"engine\": \"yoga\",
+        \"type\": \"container\",
+        \"style\": {
+            \"border-radius\": \"24rpx\",
+            \"border-width\": \"2rpx\",
+            \"border-color\": \"#EBEBEB\",
+            \"background\": \"#ffffff\"
+        },
+        \"layout\": {
+            \"width\": \"702rpx\",
+            \"padding-top\": \"32rpx\",
+            \"padding-right\": \"16rpx\",
+            \"padding-bottom\": \"20rpx\",
+            \"padding-left\": \"32rpx\",
+            \"display\": \"flex\",
+            \"align-items\": \"stretch\",
+            \"align-content\": \"center\",
+            \"flex-direction\": \"row\",
+            \"flex-wrap\": \"wrap\"
+        },
+        \"children\": [
+            {
+                \"--notes\": \"---右上角图片底 138*76--\",
+                \"type\": \"img\",
+                \"src\": \"${iconUrl}\",
+                \"layout\": {
+                    \"width\": \"276rpx\",
+                    \"height\": \"152rpx\",
+                    \"position\": \"absolute\",
+                    \"right\": \"0rpx\",
+                    \"top\": \"0rpx\"
+                }
+            },
+            {
+                \"--note\": \"--订单详情--\",
+                \"type\": \"container\",
+                \"layout\": {
+                    \"display\": \"flex\",
+                    \"flex-grow\": \"1\",
+                    \"align-items\": \"stretch\",
+                    \"margin-bottom\": \"12rpx\",
+                    \"flex-direction\": \"column\"
+                },
+                \"children\": [
+                    {
+                        \"--note\": \"--订单详情 第一行--\",
+                        \"type\": \"container\",
+                        \"layout\": {
+                            \"display\": \"flex\",
+                            \"flex-direction\": \"row\",
+                            \"height\": \"48rpx\",
+                            \"justify-content\": \"space-between\"
+                        },
+                        \"children\": [
+                            {
+                                \"type\": \"container\",
+                                \"layout\": {
+                                    \"display\": \"flex\",
+                                    \"flex-direction\": \"row\",
+                                    \"align-items\": \"stretch\",
+                                    \"min-height\": \"48rpx\"
+                                },
+                                \"children\": [
+                                    {
+                                        \"type\": \"text\",
+                                        \"max-rows\": 1,
+                                        \"text\": [
+                                            {
+                                                \"font-size\": \"24rpx\",
+                                                \"color\": \"#ffffff\",
+                                                \"content\": \"${bizName}\"
+                                            }
+                                        ],
+                                        \"layout\": {
+                                            \"justify-content\": \"center\",
+                                            \"align-items\": \"center\",
+                                            \"margin-top\": \"4rpx\",
+                                            \"padding-top\": \"2rpx\",
+                                            \"padding-bottom\": \"2rpx\",
+                                            \"padding-left\": \"12rpx\",
+                                            \"padding-right\": \"12rpx\"
+                                        },
+                                        \"style\": {
+                                            \"border-radius\": \"8rpx\",
+                                            \"border-width\": \"2rpx\",
+                                            \"border-color\": \"#ffffff\",
+                                            \"background\": \"#0088FF\"
+                                        }
+                                    },
+                                    {
+                                        \"type\": \"text\",
+                                        \"max-rows\": 1,
+                                        \"text\": [
+                                            {
+                                                \"font-size\": \"32rpx\",
+                                                \"font-weight\": \"medium\",
+                                                \"color\": \"#000000\",
+                                                \"content\": \"${prefixTitle}\"
+                                            }
+                                        ],
+                                        \"layout\": {
+                                            \"margin-left\": \"8rpx\"
+                                        }
+                                    },
+                                    {
+                                        \"type\": \"text\",
+                                        \"max-rows\": 1,
+                                        \"text\": [
+                                            {
+                                                \"font-size\": \"32rpx\",
+                                                \"font-weight\": \"medium\",
+                                                \"color\": \"${attributedTitleColor}\",
+                                                \"content\": \"${attributedTitle}\"
+                                            }
+                                        ],
+                                        \"layout\": {
+                                            \"margin-left\": \"8rpx\"
+                                        }
+                                    },
+                                    {
+                                        \"type\": \"text\",
+                                        \"max-rows\": 1,
+                                        \"text\": [
+                                            {
+                                                \"font-size\": \"32rpx\",
+                                                \"font-weight\": \"medium\",
+                                                \"color\": \"#000000\",
+                                                \"content\": \"${suffixTitle}\"
+                                            }
+                                        ],
+                                        \"layout\": {
+                                            \"margin-left\": \"8rpx\"
+                                        }
+                                    },
+                                    {
+                                        \"type\": \"text\",
+                                        \"m-if\": \"$fb{`${bizCode}`==\\\"21\\\" &amp;&amp; `${label}`!=\\\"null\\\" &amp;&amp; !`${label}`.match(/^\\\\s*$/)}\",
+                                        \"layout\": {
+                                            \"display\": \"flex\",
+                                            \"margin-left\": \"8rpx\",
+                                            \"margin-top\": \"8rpx\",
+                                            \"padding-left\": \"8rpx\",
+                                            \"padding-right\": \"8rpx\",
+                                            \"height\": \"32rpx\"
+                                        },
+                                        \"style\": {
+                                            \"border-radius\": \"8rpx\",
+                                            \"background\": \"#E7F3FE\"
+                                        },
+                                        \"max-rows\": 1,
+                                        \"text\": [
+                                            {
+                                                \"font-size\": \"20rpx\",
+                                                \"font-weight\": \"medium\",
+                                                \"color\": \"#0088FF\",
+                                                \"content\": \"${label}\"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        \"type\": \"text\",
+                                        \"m-if\": \"$fb{`${bizCode}`==\\\"24\\\" &amp;&amp; `${label}`!=\\\"null\\\" &amp;&amp; !`${label}`.match(/^\\\\s*$/)}\",
+                                        \"layout\": {
+                                            \"display\": \"flex\",
+                                            \"margin-left\": \"8rpx\",
+                                            \"margin-top\": \"8rpx\",
+                                            \"padding-left\": \"8rpx\",
+                                            \"padding-right\": \"8rpx\",
+                                            \"height\": \"32rpx\"
+                                        },
+                                        \"style\": {
+                                            \"border-radius\": \"8rpx\",
+                                            \"border-color\": \"${labelBorderColor}\",
+                                            \"border-width\": \"1rpx\"
+                                        },
+                                        \"max-rows\": 1,
+                                        \"text\": [
+                                            {
+                                                \"font-size\": \"22rpx\",
+                                                \"font-weight\": \"normal\",
+                                                \"color\": \"${labelFontColor}\",
+                                                \"content\": \"${label}\"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                \"type\": \"text\",
+                                \"m-if\": \"$fb{`${redirectContent}`!=\\\"null\\\" &amp;&amp; !`${redirectContent}`.match(/^\\\\s*$/)}\",
+                                \"max-rows\": 1,
+                                \"text\": [
+                                    {
+                                        \"font-size\": \"24rpx\",
+                                        \"font-weight\": \"medium\",
+                                        \"color\": \"#ffffff\",
+                                        \"content\": \"${redirectContent}\"
+                                    }
+                                ],
+                                \"layout\": {
+                                    \"padding-left\": \"24rpx\",
+                                    \"padding-right\": \"24rpx\",
+                                    \"align-items\": \"center\",
+                                    \"justify-content\": \"center\",
+                                    \"margin-right\": \"16rpx\"
+                                },
+                                \"style\": {
+                                    \"border-radius\": \"24rpx\",
+                                    \"border-width\": \"1rpx\",
+                                    \"border-color\": \"#ffffff\",
+                                    \"background\": \"#0088FF\"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        \"--note\": \"--订单详情 第二行--\",
+                        \"type\": \"container\",
+                        \"layout\": {
+                            \"display\": \"flex\",
+                            \"flex\": \"1\",
+                            \"height\": \"34rpx\",
+                            \"flex-direction\": \"row\",
+                            \"align-items\": \"center\",
+                            \"margin-top\": \"12rpx\"
+                        },
+                        \"children\": [
+                            {
+                                \"m-if\": \"$fb{`${date}`!=\\\"null\\\" &amp;&amp; !`${date}`.match(/^\\\\s*$/)}\",
+                                \"type\": \"text\",
+                                \"max-rows\": 1,
+                                \"layout\": {
+                                    \"margin-right\": \"16rpx\"
+                                },
+                                \"text\": [
+                                    {
+                                        \"font-size\": \"24rpx\",
+                                        \"font-weight\": \"regular\",
+                                        \"color\": \"#616568\",
+                                        \"content\": \"${date}\"
+                                    }
+                                ]
+                            },
+                            {
+                                \"type\": \"text\",
+                                \"max-rows\": 1,
+                                \"layout\": {
+                                    \"margin-right\": \"16rpx\"
+                                },
+                                \"text\": [
+                                    {
+                                        \"font-size\": \"24rpx\",
+                                        \"font-weight\": \"regular\",
+                                        \"color\": \"#616568\",
+                                        \"content\": \"${departureTime}\"
+                                    }
+                                ]
+                            },
+                            {
+                                \"type\": \"text\",
+                                \"max-rows\": 1,
+                                \"text\": [
+                                    {
+                                        \"font-size\": \"24rpx\",
+                                        \"font-weight\": \"regular\",
+                                        \"color\": \"#616568\",
+                                        \"content\": \"${departure}\"
+                                    }
+                                ]
+                            },
+                            {
+                                \"type\": \"img2\",
+                                \"layout\": {
+                                    \"width\": \"20rpx\",
+                                    \"height\": \"10rpx\",
+                                    \"margin-left\": \"8rpx\"
+                                },
+                                \"src\": \"${indicateUrl}\"
+                            },
+                            {
+                                \"type\": \"text\",
+                                \"max-rows\": 1,
+                                \"layout\": {
+                                    \"margin-left\": \"8rpx\",
+                                    \"max-width\": \"200rpx\"
+                                },
+                                \"text\": [
+                                    {
+                                        \"font-size\": \"24rpx\",
+                                        \"font-weight\": \"normal\",
+                                        \"color\": \"#616568\",
+                                        \"content\": \"${destination}\"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                \"action\": {
+                    \"click\": {
+                        \"url\": \"${redirectUrl}\"
+                    }
+                }
+            },
+            {
+                \"--note\": \"--右箭头--\",
+                \"type\": \"container\",
+                \"m-if\": \"$fb{`${redirectContent}`==\\\"null\\\" || false==`${redirectContent}`.match(/^\\\\s*$/)}\",
+                \"layout\": {
+                    \"display\": \"flex\",
+                    \"flex-direction\": \"row\",
+                    \"align-items\": \"center\",
+                    \"width\": \"24rpx\"
+                },
+                \"children\": [
+                    {
+                        \"type\": \"img1\",
+                        \"layout\": {
+                            \"width\": \"24rpx\",
+                            \"height\": \"24rpx\",
+                            \"align-items\": \"center\"
+                        },
+                        \"src\": \"${arrowImage}\"
+                    }
+                ]
+            },
+            {
+                \"--note\": \"--多订单提示--\",
+                \"type\": \"container\",
+                \"m-if\": \"$fb{`${multiOrderNum}`>=1}\",
+                \"layout\": {
+                    \"display\": \"flex\",
+                    \"flex-direction\": \"column\",
+                    \"justify-content\": \"space-between\",
+                    \"flex-grow\": \"1\",
+                    \"width\": \"100%\",
+                    \"align-items\": \"stretch\",
+                    \"margin-top\": \"12rpx\"
+                },
+                \"action\": {
+                    \"click\": {
+                        \"url\": \"${lookOrderDetail}\"
+                    }
+                },
+                \"children\": [
+                    {
+                        \"type\": \"container\",
+                        \"layout\": {
+                            \"height\": \"1rpx\",
+                            \"width\": \"100%\"
+                        },
+                        \"style\": {
+                            \"background\": \"#E1E6EB\"
+                        }
+                    },
+                    {
+                        \"type\": \"container\",
+                        \"layout\": {
+                            \"display\": \"flex\",
+                            \"flex-direction\": \"row\",
+                            \"justify-content\": \"space-between\",
+                            \"height\": \"34rpx\",
+                            \"width\": \"100%\",
+                            \"margin-top\": \"20rpx\"
+                        },
+                        \"style\": {
+                            \"border-width\": \"0rpx\",
+                            \"border-color\": \"#00ff00\"
+                        },
+                        \"children\": [
+                            {
+                                \"type\": \"text\",
+                                \"max-rows\": 1,
+                                \"layout\": {
+                                    \"display\": \"flex\",
+                                    \"flex-grow\": \"1\",
+                                    \"height\": \"100%\"
+                                },
+                                \"text\": [
+                                    {
+                                        \"font-size\": \"24rpx\",
+                                        \"font-weight\": \"regular\",
+                                        \"color\": \"#616568\",
+                                        \"content\": \"还有\"
+                                    },
+                                    {
+                                        \"font-size\": \"24rpx\",
+                                        \"font-weight\": \"medium\",
+                                        \"color\": \"#000000\",
+                                        \"content\": \"${multiOrderNum}\"
+                                    },
+                                    {
+                                        \"font-size\": \"24rpx\",
+                                        \"font-weight\": \"regular\",
+                                        \"color\": \"#616568\",
+                                        \"content\": \"${multiOrderMsg}\"
+                                    }
+                                ]
+                            },
+                            {
+                                \"type\": \"container\",
+                                \"layout\": {
+                                    \"display\": \"flex\",
+                                    \"flex-direction\": \"row\",
+                                    \"align-items\": \"center\",
+                                    \"justify-content\": \"space-between\",
+                                    \"width\": \"76rpx\"
+                                },
+                                \"children\": [
+                                    {
+                                        \"type\": \"text\",
+                                        \"max-rows\": 1,
+                                        \"text\": [
+                                            {
+                                                \"font-size\": \"24rpx\",
+                                                \"font-weight\": \"regular\",
+                                                \"color\": \"#616568\",
+                                                \"content\": \"查看\"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        \"type\": \"img2\",
+                                        \"layout\": {
+                                            \"width\": \"24rpx\",
+                                            \"height\": \"24rpx\"
+                                        },
+                                        \"src\": \"${arrowImage}\"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    </string>
+
+    <string name="data_json2">{
+        \"data\":{
+          \"styleUrl\": \"https://admaster-public.51downapp.cn/temp/style/a500746b98ca421d9fd5f19ae6738613.json?supportVersion=6.8.0&amp;md5=f7ec5f56aecc579d4c861b87d75efa20\",
+          \"bizName\": \"打车\",
+          \"bizCode\": 24,
+          \"departureTime\": \"9月23日16:38\",
+          \"redirectUrl\": \"hellobike://hellobike.com/platform/order/progress\",
+          \"redirectContent\": \"立即支付\",
+          \"departure\": \"龙料理\",
+          \"destination\": \"上海虹桥站\",
+          \"priority\": 0,
+          \"prefixTitle\": \"待支付\",
+          \"arrowImage\": \"https://resource.51downapp.cn/right_arrow.png\",
+          \"attributedTitle\": \"19.89\",
+          \"attributedTitleColor\": \"#F41717\",
+          \"multiOrderMsg\": \"还有1个单车订单进行中\",
+          \"multiOrderNum\": \"1\",
+          \"subtitle\": \"元\",
+          \"moreOrderUrl\": \"hellobike://dsl.magic/homepage/order/checkmore\"
+      }
+    }</string>
+
+
+</resources>

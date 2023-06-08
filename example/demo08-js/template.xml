@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd" logic="./template.js" width="375" lifecycle="false">
+ <container background="#dedede" padding-vertical="20rpx" width="375rpx" display="flex" flex-direction="column" align-items="center">
+
+    <span content="${message}"></span>
+    <container display="flex" flex-direction="row" flex-wrap="wrap" justify-content="center" width="100%" height="100rpx" margin-top="10rpx" >
+      <span content="showToast" click-event="$f{showToast()}" padding-horizontal="10rpx" border-radius="6rpx" height="32rpx" background="linear-gradient(to right, #FFAC44, #FF2F48)" font-size="16rpx" color="#ffffff" margin-horizontal="5rpx" margin-vertical="5rpx"></span>
+      <span content="ajaxGET" click-event="$f{ajaxGET()}" padding-horizontal="10rpx" border-radius="6rpx" height="32rpx" background="linear-gradient(to right, #FFAC44, #FF2F48)" font-size="16rpx" color="#ffffff" margin-horizontal="5rpx" margin-vertical="5rpx"></span>
+      <span content="ajaxPOST" click-event="$f{ajaxPOST()}" padding-horizontal="10rpx" border-radius="6rpx" height="32rpx" background="linear-gradient(to right, #FFAC44, #FF2F48)" font-size="16rpx" color="#ffffff" margin-horizontal="5rpx" margin-vertical="5rpx"></span>
+      <span content="timeoutTask" click-event="$f{timeoutTask()}" padding-horizontal="10rpx" border-radius="6rpx" height="32rpx" background="linear-gradient(to right, #FFAC44, #FF2F48)" font-size="16rpx" color="#ffffff" margin-horizontal="5rpx" margin-vertical="5rpx"></span>
+      <span content="saveCache" click-event="$f{saveCache()}" padding-horizontal="10rpx" border-radius="6rpx" height="32rpx" background="linear-gradient(to right, #FFAC44, #FF2F48)" font-size="16rpx" color="#ffffff" margin-horizontal="5rpx" margin-vertical="5rpx"></span>
+      <span content="readCache" click-event="$f{readCache()}" padding-horizontal="10rpx" border-radius="6rpx" height="32rpx" background="linear-gradient(to right, #FFAC44, #FF2F48)" font-size="16rpx" color="#ffffff" margin-horizontal="5rpx" margin-vertical="5rpx"></span>
+    </container> 
+
+ </container>
+</template>

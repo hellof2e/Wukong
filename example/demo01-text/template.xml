@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd" width="750" lifecycle="false">
+ <container background="#dedede" padding-vertical="20rpx" width="750rpx" display="flex" flex-direction="column" justify-content="center" align-items="center">
+  
+  <!-- text 富文本 -->
+  <text padding-horizontal="10rpx" padding-vertical="10rpx" >
+    <keyword content="通过 " color="#000000" font-size="31rpx"/>
+    <keyword content="关键字拼接" color="#ff0000" font-weight="bold" font-size="31rpx"/>
+    <keyword content="的方式来实现富文本的展示。" color="#000000" font-size="31rpx"/>
+  </text>
+
+  <!-- span -->
+  <span font-size="31rpx" padding-horizontal="10rpx" padding-vertical="10rpx" content="通过关键字匹配的方式来实现富文本的展示。" color="#000000">
+    <keyword content="关键字匹配" color="#ff0000" font-weight="bold" />
+  </span>
+
+  <!-- text 富文本加载图片 -->
+  <text click-event="$f{doClickEvent()}" padding-horizontal="10rpx" padding-vertical="10rpx">
+    <keyword-image url="https://www.baidu.com/img/flexible/logo/pc/result@2.png" width="101rpx" height="33rpx"/>
+    <keyword content="这是一个描述富文本中加载图片的案例。可以通过标签 keyworld-image 来指定图片的 url。" font-size="31rpx" />
+  </text>
+
+
+
+ </container>
+</template>

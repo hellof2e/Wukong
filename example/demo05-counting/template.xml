@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3school.com.cn"
+    xsi:schemaLocation="http://www.w3school.com.cn magic.xsd" width="750" logic="./template.js" lifecycle="true">
+ <container background="#dedede" padding-vertical="20rpx" width="750rpx" display="flex" flex-direction="column" justify-content="center" align-items="center">
+  
+  <!--  stop：默认为0，可以不写 -->
+	<!--  interval：默认为1000，可以不写 -->
+  <!--  clock-offset：默认为0，可以不写 -->
+  <!--  counting-type：默认为time，可以不写 -->
+  <counting display="flex" deadline="${deadline}" stop="0" interval="1000" clock-offset="0" counting-type="time" finish-event="$f{clockFinish()}">
+    <span content="${MC_TIMER.hour}"></span>
+    <span content="时"></span>
+    <span content="${MC_TIMER.minute}"></span>
+    <span content="分"></span>
+    <span content="${MC_TIMER.second}"></span>
+    <span content="秒"></span>
+  </counting>
+
+  <counting margin-top="10rpx" display="flex" deadline="${deadline}" stop="0" interval="1000" clock-offset="0" counting-type="datetime" finish-event="$f{clockFinish()}">
+    <span content="${MC_TIMER.day}"></span>
+    <span content="天"></span>
+    <span content="${MC_TIMER.hour}"></span>
+    <span content="时"></span>
+    <span content="${MC_TIMER.minute}"></span>
+    <span content="分"></span>
+    <span content="${MC_TIMER.second}"></span>
+    <span content="秒"></span>
+  </counting>
+
+ </container>
+</template>
