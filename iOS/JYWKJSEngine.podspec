@@ -14,16 +14,16 @@ Pod::Spec.new do |s|
   js runtime engine of Wukong.
                        DESC
   s.license          = { :type => 'Apache License 2.0', :file => 'LICENSE' }
-  s.homepage         = 'https://github.com/hellof2e/Wukong'
+  s.homepage         = 'https://hellobike.yuque.com/org-wiki-nlsyth/hec0gc/mput57lpnzvhnh7k'
   s.author           = 'hellobike'
   s.source           = { :git => 'https://github.com/hellof2e/Wukong.git', :tag => s.version.to_s }
+  s.requires_arc = true
   s.swift_version = '5.0'
   s.ios.deployment_target = '9.0'
   s.static_framework = true
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES'
   }
-  s.source_files = 'iOS/JYWKJSEngine/Classes/**/*'
-  s.public_header_files = ['iOS/JYWKJSEngine/Classes/PublicHeaders/*.h']
+  s.source_files = "JYWKJSEngine/Classes/**/*.swift"
 
 end
