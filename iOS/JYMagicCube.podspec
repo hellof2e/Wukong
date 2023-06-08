@@ -25,33 +25,33 @@ Pod::Spec.new do |s|
   s.static_framework = true
   s.source_files = 'iOS/JYMagicCube/Classes/**/*'
   s.resource_bundles = {
-    'JYMagicCube' => ['JYMagicCube/Assets/**/*.{xib,gif,xcassets,png,json,mp3,plist}']
+    'JYMagicCube' => ['iOS/JYMagicCube/Assets/**/*.{xib,gif,xcassets,png,json,mp3,plist}']
   }
-  s.public_header_files = ['JYMagicCube/Classes/JYMagicCube.h',
-                           'JYMagicCube/Classes/JYMCConfigure.h',
-                           'JYMagicCube/Classes/JYMagicCubeView.h',
-                           'JYMagicCube/Classes/JYMagicCubeView+Tool.h',
-                           'JYMagicCube/Classes/Model/JYMCMetaData.h',
-                           'JYMagicCube/Classes/JYMCActionContext.h',
-                           'JYMagicCube/Classes/JYMagicCubeDefine.h',
-                           'JYMagicCube/Classes/**/JYMCTrackAdapter.h',
-                           'JYMagicCube/Classes/**/JYMCCustomerFactoryProtocol.h',
-                           'JYMagicCube/Classes/**/JYMCStyleManager.h',
-                           'JYMagicCube/Classes/**/JYMCStyleOperation.h',
-                           'JYMagicCube/Classes/**/JYMCStylePrefetcher.h',
-                           'JYMagicCube/Classes/**/Model/JYMCStyleMetaData.h',
-                           'JYMagicCube/Classes/**/JYMCLocalParameters.h',
-                           'JYMagicCube/Classes/**/JYMCTrackContext.h',
-                           'JYMagicCube/Classes/**/JYMCPreload.h',
+  s.public_header_files = ['iOS/JYMagicCube/Classes/JYMagicCube.h',
+                           'iOS/JYMagicCube/Classes/JYMCConfigure.h',
+                           'iOS/JYMagicCube/Classes/JYMagicCubeView.h',
+                           'iOS/JYMagicCube/Classes/JYMagicCubeView+Tool.h',
+                           'iOS/JYMagicCube/Classes/Model/JYMCMetaData.h',
+                           'iOS/JYMagicCube/Classes/JYMCActionContext.h',
+                           'iOS/JYMagicCube/Classes/JYMagicCubeDefine.h',
+                           'iOS/JYMagicCube/Classes/**/JYMCTrackAdapter.h',
+                           'iOS/JYMagicCube/Classes/**/JYMCCustomerFactoryProtocol.h',
+                           'iOS/JYMagicCube/Classes/**/JYMCStyleManager.h',
+                           'iOS/JYMagicCube/Classes/**/JYMCStyleOperation.h',
+                           'iOS/JYMagicCube/Classes/**/JYMCStylePrefetcher.h',
+                           'iOS/JYMagicCube/Classes/**/Model/JYMCStyleMetaData.h',
+                           'iOS/JYMagicCube/Classes/**/JYMCLocalParameters.h',
+                           'iOS/JYMagicCube/Classes/**/JYMCTrackContext.h',
+                           'iOS/JYMagicCube/Classes/**/JYMCPreload.h',
                            
                            # Alert
-                           'JYMagicCube/Classes/**/JYMagicAlert.h',
-                           'JYMagicCube/Classes/**/JYMCAlertConfig.h',
-                           'JYMagicCube/Classes/**/JYMagicAlertLoader.h',
-                           'JYMagicCube/Classes/**/JYMagicAlertLoaderDelegate.h',
-                           'JYMagicCube/Classes/**/JYMagicAlertLoaderProtocol.h',
-                           'JYMagicCube/Classes/**/JYMagicAlertProtocol.h',
-                           'JYMagicCube/Classes/**/JYMagicAlertLifeCycleDelegate.h',
+                           'iOS/JYMagicCube/Classes/**/JYMagicAlert.h',
+                           'iOS/JYMagicCube/Classes/**/JYMCAlertConfig.h',
+                           'iOS/JYMagicCube/Classes/**/JYMagicAlertLoader.h',
+                           'iOS/JYMagicCube/Classes/**/JYMagicAlertLoaderDelegate.h',
+                           'iOS/JYMagicCube/Classes/**/JYMagicAlertLoaderProtocol.h',
+                           'iOS/JYMagicCube/Classes/**/JYMagicAlertProtocol.h',
+                           'iOS/JYMagicCube/Classes/**/JYMagicAlertLifeCycleDelegate.h',
                           ]
   
   s.dependency 'YogaKit'
