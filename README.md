@@ -12,7 +12,7 @@
   <a href="https://hellobike.yuque.com/platform_app/hec0gc/mput57lpnzvhnh7k">
     <img src="https://img.shields.io/badge/group-Wukong-brightgreen" alt="Group Wukong">
   </a>
-  <a href="https://gitlab.hellobike.cn/Torrent/Wukong">
+  <a href="https://github.com/hellof2e/Wukong/pulls">
     <img src="https://img.shields.io/badge/PRs-welcome-blue" alt="PRs welcome">
   </a>
   <a href="LICENSE">
