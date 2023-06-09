@@ -25,9 +25,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.static_framework = true
   s.source_files = 'iOS/JYMagicCube/Classes/**/*'
-  s.resource_bundles = {
-    'JYMagicCube' => ['iOS/JYMagicCube/Assets/**/*.{xib,gif,xcassets,png,json,mp3,plist}']
-  }
   s.public_header_files = ['iOS/JYMagicCube/Classes/JYMagicCube.h',
                            'iOS/JYMagicCube/Classes/JYMCConfigure.h',
                            'iOS/JYMagicCube/Classes/JYMagicCubeView.h',
