@@ -65,6 +65,7 @@ Wukong 基于 Apache-2.0 协议进行分发和使用，更多信息参见 [协�
 
 - **内部核心成员**
 [zyfrog](https://github.com/zyfrog), 
+[ArchLL](https://github.com/ArchLL),
 [Jiuaim](https://github.com/Jiuaim), 
 [Beyond-Chao](https://github.com/Beyond-Chao), 
 [wangshuwen](https://github.com/wangshuwen1107), 
