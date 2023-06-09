@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JYWKJSEngine'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'js runtime engine.'
   s.description      = <<-DESC
   js runtime engine of Wukong.
@@ -17,9 +17,9 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://hellobike.yuque.com/org-wiki-nlsyth/hec0gc/mput57lpnzvhnh7k'
   s.author           = 'hellobike'
   s.source           = { :git => 'https://github.com/hellof2e/Wukong.git', :tag => s.version.to_s }
-  s.requires_arc = true
+  s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
-  s.ios.deployment_target = '9.0'
+  s.requires_arc = true
   s.static_framework = true
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES'

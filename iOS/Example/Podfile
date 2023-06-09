@@ -1,12 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
+platform :ios, '10.0'
 
 post_install do |installer|
   installer.generated_projects.each do |project|
     project.targets.each do |target|
         target.build_configurations.each do |config|
             config.build_settings['CODE_SIGN_IDENTITY'] = ''
-	    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
+	          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
         end
     end
   end
@@ -14,9 +15,11 @@ end
 
 target 'JYMagicCube_Example' do
 
+  # pod 'JYMagicCube'
   pod 'JYMagicCube', :path => '../../'
+  # pod 'JYWKJSEngine'
   pod 'JYWKJSEngine', :path => '../../', :modular_headers => true
-  
+
   pod 'YogaKit', '~> 1.18.1'
   pod 'YYCache', '~> 1.0.4'
   pod 'YYCategories', '~> 1.0.4'

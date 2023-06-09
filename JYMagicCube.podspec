@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JYMagicCube'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Mobile dynamic solution'
   s.description      = <<-DESC
   It is a complete cross-end native partial card dynamic display technology solution, 
@@ -21,7 +21,8 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://hellobike.yuque.com/org-wiki-nlsyth/hec0gc/mput57lpnzvhnh7k'
   s.author           = 'hellobike'
   s.source           = { :git => 'https://github.com/hellof2e/Wukong.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
+  s.requires_arc = true
   s.static_framework = true
   s.source_files = 'iOS/JYMagicCube/Classes/**/*'
   s.resource_bundles = {
