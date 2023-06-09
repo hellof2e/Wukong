@@ -61,12 +61,12 @@ Wukong 基于 Apache-2.0 协议进行分发和使用，更多信息参见 [协�
 
 ## 团队成员
 - **负责人**
-[zyfrog](https://github.com/zyfrog), 
+[Mr.fan](https://github.com/guitar123), 
 
 - **内部核心成员**
-[Mr.fan](https://github.com/guitar123), 
+[zyfrog](https://github.com/zyfrog), 
 [Jiuaim](https://github.com/Jiuaim), 
 [Beyond-Chao](https://github.com/Beyond-Chao), 
 [wangshuwen](https://github.com/wangshuwen1107), 
-[yinghuayu](https://github.com/yinghuayu2377), 
+[yinghuayu](https://github.com/yinghuayu2377)
 
