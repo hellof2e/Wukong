@@ -73,8 +73,8 @@ Wukong 基于 Apache-2.0 协议进行分发和使用，更多信息参见 [协�
 
 ## 微信公众号
 欢迎关注我们的官方技术公众号【哈啰技术】，我们会在这里持续输出内部比较有价值有深度的技术沉淀，欢迎一起交流。
-<div style="height: 200px">
- <img alt="哈啰技术" src="imgs/code.jpeg" height = "200" />
+<div align="center" style="height: 400px">
+ <img alt="哈啰技术" src="imgs/code.jpeg" height = "400" />
 </div>
 
 ## 友情链接
