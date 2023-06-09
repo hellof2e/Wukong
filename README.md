@@ -70,3 +70,8 @@ Wukong 基于 Apache-2.0 协议进行分发和使用，更多信息参见 [协�
 [wangshuwen](https://github.com/wangshuwen1107), 
 [yinghuayu](https://github.com/yinghuayu2377)
 
+
+## 友情链接
+- [YogaLayout](https://yogalayout.com/) Yoga是一个基于Flexbox的跨平台开源布局引擎，在任何平台上构建灵活的布局，该引擎的设计考虑到了速度、大小和易用性。
+- [QuickJS](https://bellard.org/quickjs/) QuickJS是一个小型且可嵌入的Javascript引擎。
+
