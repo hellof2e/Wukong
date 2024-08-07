@@ -35,7 +35,7 @@ Wukong 在标准UI组件、JS 动态能力、样式支持能力、自定义组�
 - 体积小、性能好、内存少
 
 ## 开始使用
-- 官方文档请访问 [Wukong](https://hellobike.yuque.com/platform_app/hec0gc/mput57lpnzvhnh7k)。
+- 官方文档请访问 [Wukong](https://hellobike.yuque.com/vpf6e4/kux8no/mput57lpnzvhnh7k?singleDoc# 《悟空动态化卡片》)。
 - 快速接入客户端，请参考 [接入客户端](https://hellobike.yuque.com/platform_app/hec0gc/inx6k0ebz3g61wco)。
 - 想了解更多卡片语法，请参考 [卡片语法](https://hellobike.yuque.com/platform_app/hec0gc/cfmgowg3cplodp0r)。
 - 想了解更多 Wukong 脚本的使用说明，请参考 [环境搭建](https://hellobike.yuque.com/platform_app/hec0gc/ttxok7caqgdcvl8w)。
